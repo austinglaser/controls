@@ -1,0 +1,32 @@
+
+ld{x}=\left[ \begin{array}{c} 
+\theta_1 \\
+\theta_2 \\ 
+\theta_3 \\ 
+\dot{\theta}_1 \\
+\dot{\theta}_2 \\ 
+\dot{\theta}_3 \\ 
+\end{array} \right]\\
+\bold{\dot{x}}=\left[ \begin{array}{cccccc} 
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1 \\
+-\frac{k_1}{J_1} & \frac{k_1}{J_1} & 0 & -\frac{c_1}{J_1} & 0 & 0 \\
+\frac{k_1}{J_2} & -\frac{k_1 + k_2}{J_2} & \frac{k_2}{J_2} & 0 & -\frac{c_2}{J_2} & 0 \\
+0 & \frac{k_2}{J_3} & -\frac{k_2}{J_3} & 0 & 0 & -\frac{c_3}{J_3}
+\end{array} \right]
+\bold{x}
+
++ 
+
+\left[ \begin{array}{c} 
+0 \\
+0 \\ 
+0 \\ 
+\frac{k_h}{J_1} \\
+0 \\ 
+0 \\ 
+\end{array} \right]\bold{u} \\
+\bold{y} = \left[ \begin{array}{cccccc} 
+1 & 0 & 0 & 0 & 0 & 0 
+\end{array} \right]\bold{x} + \left[\begin{array}{c} 0 \end{array} \right ]\bold{u}
