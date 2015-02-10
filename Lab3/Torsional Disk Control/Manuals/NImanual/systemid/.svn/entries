@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="47"
+   name=""
+   committed-date="2007-10-10T07:46:08.086640Z"
+   url="https://robotics.colorado.edu/svn/NImanual/systemid"
+   last-author="erjohnso"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="44"
+   name="systemid-parameters-recorder.vi"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="c02875b1cf1274a72710f99748390b23"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+<entry
+   committed-rev="32"
+   name="main.tex"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-10-17T00:23:39.190646Z"
+   checksum="6b6876805b8debc08d4c54ab68881301"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+<entry
+   committed-rev="44"
+   name="determine-2nd-order-parameters.vi"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="a9872c851e504da298edd5634a21f48c"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+<entry
+   committed-rev="47"
+   name="20071009-data-results.txt"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2007-10-10T07:46:08.086640Z"
+   checksum="1f140a4638ba236afb3a7ecec024d0e6"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+<entry
+   committed-rev="44"
+   name="systemid-fpga-interface.vi"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="cdcb5980b516fcabf63638c922899d1a"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+<entry
+   committed-rev="44"
+   name="determine-model-parameters.vi"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="2e688a876f8482ade9a1cc247ccfa6d0"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+<entry
+   committed-rev="44"
+   name="convert-2nd-order-parameters.vi"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="7ebb2f35f597c481cfd675e07c767289"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+<entry
+   committed-rev="44"
+   name="system-id.lvproj"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="f390fbedf01620bf7f657a6bfbfdecb2"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+<entry
+   committed-rev="47"
+   name="systemid-hardware-analyzer.vi"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2007-10-10T07:46:08.086640Z"
+   checksum="0de791e8da55a6a5528c442b3c582bb0"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+<entry
+   committed-rev="44"
+   name="encoder.vi"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="7bf62c11dca73b80eb59c295e83b5a02"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+<entry
+   committed-rev="44"
+   name="measurement-data.zip"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="14b3f82464022cf59618604024a5fb60"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+<entry
+   committed-rev="44"
+   name="system-id.aliases"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="de7d3af1d0b3dc5c2c927c151daea424"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:33.000000Z"/>
+<entry
+   name="FPGA bitfiles"
+   kind="dir"/>
+<entry
+   committed-rev="44"
+   name="systemid-parameters-analyzer.vi"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="79b7c1a80260187598be59cf007959ff"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:33.000000Z"/>
+<entry
+   committed-rev="44"
+   name="torsional-fpga-interface.lvbit"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="6da04ffd7a8d1d69dd3c3e7db5e962f2"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:33.000000Z"/>
+<entry
+   committed-rev="46"
+   name="20071009-data.zip"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2007-10-10T04:54:05.882451Z"
+   checksum="60253ad3b159f927dc92d9b039bcad15"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:33.000000Z"/>
+<entry
+   committed-rev="44"
+   name="systemid-hardware-recorder.vi"
+   text-time="2008-12-01T23:48:34.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="6dc117d47c4f2f4f98ab721f685193c0"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:34.000000Z"/>
+</wc-entries>

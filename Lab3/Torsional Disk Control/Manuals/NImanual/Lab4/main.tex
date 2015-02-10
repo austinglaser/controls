@@ -1,0 +1,174 @@
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\textbf{ECEN 4638--T.D. Murphey}}
+\fancyfoot[R]{\textbf{Lab \#4}}
+\fancyfoot[C]{\vspace{.2in}\thepage}
+
+\chapter{Lab \#4:  Open-Loop and Hardware-Based PID Control Design}
+\date{}
+
+\begin{center}  \textbf{Objective}
+\end{center}
+
+The purpose of this lab is to use EPS Torsional Disk System (TDS) to learn how
+to apply some simple control techniques to a reasonably high-order, non-trivial
+system.  As such, there will be no pre-lab simulation, although there will be some
+simulation in your analysis of your results.  We are also attempting to create a
+benchmark for how well one can do using ``hack'' techniques that involve no
+analysis.
+
+The lab will consist of two main components.  First, you will figure out what
+open-loop control you can apply to get the ECP unit to rotate 180 degrees and
+then rotate back 180 degrees with four weights on the bottom disk and two
+weights on the middle and top disks. Then, based on experiment, you will design 
+P, PD, and PID controllers to meet some specifications and do the same
+experiment.  
+
+Please always run the ECP unit with someone holding the power button, in case
+something happens to go wrong.  
+
+\vspace{.2in}
+
+\begin{center} \textsc{Note that this lab will be a one-week lab.}
+\end{center}
+
+\begin{center} \textbf{Warning:} 
+\end{center}
+
+As before, please do not break the TDS systems.  If you have questions, or are
+unsure of a next step, please let us know.  However, the most important thing is
+to \emph{never run the system while it is clamped down}!  If you follow this one
+rule, it is extremely unlikely (though sadly not impossible) that you will break
+the system.
+
+
+\newpage
+\section{Pre-Lab Tasks}
+
+If you wish, you may want to create the open-loop VI and PID VI's ahead of
+time.  Aside from that, there are no pre-lab tasks (primarily because almost
+everyone is preparing for the controls lecture midterm!).  
+
+\section{Tasks}
+
+
+
+\subsection{Task \#1--Open-Loop Control}
+
+Attach four weights to the bottom disk, two disks to the middle disk, and two
+disks to the top disk, all at $7 cm$ from the center.  
+
+\noindent \textbf{Task:} Using trial and error (or
+simulation if you like) get an open-loop controller that moves the bottom disk
+from an initial orientation of $0$ to a final orientation of $\pi$ and back to 0
+in 5 seconds with an error of 2 degrees ($=2\pi/180\  rad$).  Repeat this
+experiment 10 times.  What is the average error of the outcome?
+
+\noindent \textbf{Task:} Move the weights to $9 cm$ and perform the experiment
+again using the same open loop control inputs.  How much more error do you get?
+Change the open-loop control to meet the same specifications.  How much did it
+change?
+
+
+\subsection{Task \#2--P, PD, PID Control}
+
+\noindent Before running these experiments, please let the TA or myself see your
+LabVIEW code.  Also, be prepared for the fact that you \emph{may destabilize the
+  system}, so don't be caught unaware!  This is because you are introducing
+feedback into a system, and feedback can make an otherwise stable system
+unstable.  
+
+\noindent \textbf{Task:}  With the weights at their $7 cm$ location, implement a
+proportional controller $C(s)=K$ (read the end of the lab to see how to do
+this).  Try to get a rise time of $1 s$ and less than $30\%$ overshoot and
+settling time of $3 s$ and $e_{ss} \leq 2 deg$ with respect to a step input.  Once
+you have your system stabilized using your controller, \emph{gently} rotate the
+disk.  It should resist your push in much the same way a spring does.
+
+\noindent \textbf{Task:}  Move the weights to  $9 cm$.  How does your
+performance change?
+
+\noindent \textbf{Task:}  With the weights at their $7 cm$ location, implement a
+PD  controller ($C(s)=K+K_D s$) to meet the specifications.
+
+\noindent \textbf{Task:}  Move the weights to  $9 cm$.  How does your
+performance change?
+
+
+\noindent \textbf{Task:}  With the weights at their $7 cm$ location, implement 
+a PID controller ($C(s)=K+K_D s+ K_I \frac{1}{s}$) to meet the specifications.
+
+\noindent \textbf{Task:}  Move the weights to  $9 cm$.  How does your
+performance change?
+
+\noindent \textbf{Task:}  Change the output of the system to be the top disk.
+\emph{Be careful here} because you might destabilize the system.  Does this make
+the control design easier or harder?  How does your controller for the bottom
+disk perform for the top disk?  What are the qualitative differences?  How do
+you explain the differences?  What values of $K$, $K_D$ and $K_I$ in $C(s)=K+K_D
+s+ K_I \frac{1}{s}$ stabilize the system?
+
+
+
+\subsection{Task \#3--Simulation}
+
+\noindent \textbf{Task:}  Simulate your controller designs with the parameters
+you found in Lab 3 and with the simulations you built in Lab 2.  Compare the
+output of the actual physical system to the simulation.  How should one compare
+two different responses? Relative to such a comparison, how close is the
+simulation to the real system?  What parameters need to be fixed?
+
+
+\noindent \textbf{Task:}  In simulation, can you improve your PID design (for
+either output)?  
+
+\noindent \textbf{Task:}  At some point in this lab, you have almost certainly
+destabilized the system by making some parameter too large.  Use the
+\emph{rlocus} command or the root locus tool to find the root locus of for the
+system relative to this parameter.  Can you explain the instability you saw
+using by using the root locus?
+
+
+
+
+
+\section{Things You May Want To Know}
+
+Here are some LabVIEW hints for this lab.
+
+\begin{enumerate}
+\item Use a Create Control command for the reference input--this will allow you
+  to play the with controller ``on the fly.''
+\item In order to create a feedback loop, you must use a local variable in
+  LabVIEW.  (This is to avoid algebraic loops in the code.)  To do this, use the
+  following procedure:
+  \begin{enumerate}
+  \item Instead of creating a wire that goes from the output to the summation
+    block (that create your negative feedback), right click on the ``negative''
+    portion of the summation block and ``Create Control.''  Name this control
+    ``Feedback.''  
+  \item Use the palette function \emph{All Functions--Structures--Local} to create a
+    local variable.  Make sure it is in ``write'' mode, and wire the output that
+    you are interested in into it.  Click on it and select ``Feedback.''  You
+    now have successfully ``closed the loop'' of your system.  
+  \end{enumerate}
+\item When you need to take a time derivative for the ``D'' part of your
+  controller, do not use the ``s'' block in the Simulation Module.  Instead, use
+  the palette function \emph{All Functions--Analyze--Point by Point--Time
+    Domain--Derivative} to take derivatives.
+\item Be very careful to make sure all your units are the same.
+\end{enumerate}
+
+
+
+
+\vspace{0.2in}
+         
+
+\noindent Remember, if you get stuck on some part of the lab, ask your
+classmates, the TA, or myself.
+
+
+%% Local Variables:
+%% TeX-master: "../LVmanual.tex"
+%% End:

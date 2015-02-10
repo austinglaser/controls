@@ -1,0 +1,202 @@
+<?xml version='1.0'?>
+<Project Type="Project" LVVersion="8208000">
+   <Item Name="My Computer" Type="My Computer">
+      <Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
+      <Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
+      <Property Name="server.tcp.enabled" Type="Bool">false</Property>
+      <Property Name="server.tcp.port" Type="Int">0</Property>
+      <Property Name="server.tcp.serviceName" Type="Str">My Computer/VI Server</Property>
+      <Property Name="server.tcp.serviceName.default" Type="Str">My Computer/VI Server</Property>
+      <Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
+      <Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
+      <Property Name="specify.custom.address" Type="Bool">false</Property>
+      <Item Name="FPGA Target" Type="FPGA Target">
+         <Property Name="configString.guid" Type="Str">{321F7377-8F9B-4971-BF24-179E2DC0085C}"Depth=8191;Width=4;Dir=0;Strategy=1;Read Arbs=None;Write Arbs=Optimize For Single;Type=2;Channel=0;Write=0Voltage-In-FIFO"{354390E7-FFA4-46CF-96E3-148C93047183}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO4;0{5319D90E-080C-4D73-ACAF-5C98805C25A6}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO1;0{92FEF9A7-C43B-4BD5-99D4-163198A12B5A}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO0;0{A3EDA5A7-20DC-4CD0-91C6-F18B67C8EB7F}"Depth=16383;Width=4;Dir=0;Strategy=1;Read Arbs=Optimize For Single;Write Arbs=Optimize For Single;Type=2;Channel=1;Write=1Angle-Out-FIFO"{AEEFDDA2-7559-4B4F-8CB7-723526D0AACD}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO3;0{C69F1E6A-3BA4-4412-837E-20008084BCDF}###!!A!!!")!&amp;E!Q`````QV3:8.P&gt;8*D:3"/97VF!"R!-0````]36'^Q)&amp;.J:WZB&lt;#"$&lt;WZO:7.U!!!;1$$`````%5.M&lt;W.L)&amp;.J:WZB&lt;#"/97VF!"B!#B*.;7YA2H*F=86F&lt;G.Z)#B)?CE!!"B!#B*.98AA2H*F=86F&lt;G.Z)#B)?CE!!"B!)2*798*J97*M:3"'=G6R&gt;76O9XE!!"R!#B:/&lt;WVJ&lt;G&amp;M)%:S:8&amp;V:7ZD?3!I3(IJ!!!=1!I85'6B;S"1:8*J&lt;W1A3GFU&gt;'6S)#BQ=SE!(%!+&amp;UVJ&lt;C"%&gt;82Z)%.Z9WRF)#AF)%BJ:WAJ!"R!#B&gt;.98AA2(6U?3"$?7.M:3!I*3");7&gt;I+1!51!I/17.D&gt;8*B9XEA+("Q&lt;3E!!"*!)1R'=G6F)&amp;*V&lt;GZJ&lt;G=!!"2!)1^4=(*F971A5X"F9X2S&gt;7U!%E!Q`````QB$&lt;'^D;S"*2!!!/%"!!!(`````!!UK5G6M982F:#"$&lt;'^D;X-A&gt;WFU;#"O&lt;S"$2%-A9W^N=(-A&lt;G6D:8.T98*Z!!!31&amp;--2W6O:8*J9S"%982B!!!/1$$`````"5&amp;M;7&amp;T!']!]1!!!!!!!!!")'ZJ=H:J1G&amp;T:624382F&lt;5.P&lt;G:J:X6S982J&lt;WYO9X2M!%6!5!!1!!!!!1!#!!-!"!!&amp;!!9!"Q!)!!E!#A!,!!Q!$A!0!"!&lt;1X6S=G6O&gt;#"$&lt;'^D;S"$&lt;WZG;7&gt;V=G&amp;U;7^O!!%!%1!!!"1U-#".3(IA4WZC&lt;W&amp;S:#"$&lt;'^D;Q!!!!6$&lt;'MU-!!!!!6$&lt;'MU-%'$%N!!!!!!19-3U!!!!!!!19-3U!!!!!"!&lt;U!!!!!!!%"*!!!!!!!!1%E!!!!!!!"!71!!!!!!!!%!!!!!!!AAA!)!!!!"!!1!!!!"!!!!!!!!!!!!&amp;$1Q)%V)?C"0&lt;G*P98*E)%.M&lt;W.L!!!!!!{D4AC17E4-E54E-4C84-A9D4-F4A98A7240DE}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO5;0{F4C0A0AC-25AD-487F-AB3C-AE7C7781E19A}Arbitration=AlwaysArbitrate;resource=/Connector0/AO0;0{FF057AE7-43D7-45A0-9278-847D21FBE0C6}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO2;0PCI-7831R/Clk40/40 MHz Onboard ClockfalseTARGET_TYPEFPGA</Property>
+         <Property Name="configString.name" Type="Str">40 MHz Onboard Clock###!!A!!!")!&amp;E!Q`````QV3:8.P&gt;8*D:3"/97VF!"R!-0````]36'^Q)&amp;.J:WZB&lt;#"$&lt;WZO:7.U!!!;1$$`````%5.M&lt;W.L)&amp;.J:WZB&lt;#"/97VF!"B!#B*.;7YA2H*F=86F&lt;G.Z)#B)?CE!!"B!#B*.98AA2H*F=86F&lt;G.Z)#B)?CE!!"B!)2*798*J97*M:3"'=G6R&gt;76O9XE!!"R!#B:/&lt;WVJ&lt;G&amp;M)%:S:8&amp;V:7ZD?3!I3(IJ!!!=1!I85'6B;S"1:8*J&lt;W1A3GFU&gt;'6S)#BQ=SE!(%!+&amp;UVJ&lt;C"%&gt;82Z)%.Z9WRF)#AF)%BJ:WAJ!"R!#B&gt;.98AA2(6U?3"$?7.M:3!I*3");7&gt;I+1!51!I/17.D&gt;8*B9XEA+("Q&lt;3E!!"*!)1R'=G6F)&amp;*V&lt;GZJ&lt;G=!!"2!)1^4=(*F971A5X"F9X2S&gt;7U!%E!Q`````QB$&lt;'^D;S"*2!!!/%"!!!(`````!!UK5G6M982F:#"$&lt;'^D;X-A&gt;WFU;#"O&lt;S"$2%-A9W^N=(-A&lt;G6D:8.T98*Z!!!31&amp;--2W6O:8*J9S"%982B!!!/1$$`````"5&amp;M;7&amp;T!']!]1!!!!!!!!!")'ZJ=H:J1G&amp;T:624382F&lt;5.P&lt;G:J:X6S982J&lt;WYO9X2M!%6!5!!1!!!!!1!#!!-!"!!&amp;!!9!"Q!)!!E!#A!,!!Q!$A!0!"!&lt;1X6S=G6O&gt;#"$&lt;'^D;S"$&lt;WZG;7&gt;V=G&amp;U;7^O!!%!%1!!!"1U-#".3(IA4WZC&lt;W&amp;S:#"$&lt;'^D;Q!!!!6$&lt;'MU-!!!!!6$&lt;'MU-%'$%N!!!!!!19-3U!!!!!!!19-3U!!!!!"!&lt;U!!!!!!!%"*!!!!!!!!1%E!!!!!!!"!71!!!!!!!!%!!!!!!!AAA!)!!!!"!!1!!!!"!!!!!!!!!!!!&amp;$1Q)%V)?C"0&lt;G*P98*E)%.M&lt;W.L!!!!!!Angle-Out-FIFO"Depth=16383;Width=4;Dir=0;Strategy=1;Read Arbs=Optimize For Single;Write Arbs=Optimize For Single;Type=2;Channel=1;Write=1Angle-Out-FIFO"Bottom Ch. AArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO1;0Bottom Ch. BArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO0;0Middle Ch.  BArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO2;0Middle Ch. AArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO3;0Motor OutputArbitration=AlwaysArbitrate;resource=/Connector0/AO0;0PCI-7831R/Clk40/40 MHz Onboard ClockfalseTARGET_TYPEFPGATop Ch. AArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO5;0Top Ch. BArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO4;0Voltage-In-FIFO"Depth=8191;Width=4;Dir=0;Strategy=1;Read Arbs=None;Write Arbs=Optimize For Single;Type=2;Channel=0;Write=0Voltage-In-FIFO"</Property>
+         <Property Name="NI.LV.FPGA.CompileConfigString" Type="Str">PCI-7831R/Clk40/40 MHz Onboard ClockfalseTARGET_TYPEFPGA</Property>
+         <Property Name="NI.LV.FPGA.Version" Type="Int">3</Property>
+         <Property Name="Resource Name" Type="Str">RIO0::INSTR</Property>
+         <Property Name="Target Class" Type="Str">PCI-7831R</Property>
+         <Property Name="Top-Level Timing Source" Type="Str">40 MHz Onboard Clock</Property>
+         <Property Name="Top-Level Timing Source Is Default" Type="Bool">true</Property>
+         <Item Name="I/O" Type="Folder">
+            <Item Name="Motor Output" Type="Elemental IO">
+               <Property Name="eioAttrBag" Type="Xml"><AttributeSet name="FPGA Target">
+   <Attribute name="Arbitration">
+   <Value>AlwaysArbitrate</Value>
+   </Attribute>
+   <Attribute name="resource">
+   <Value>/Connector0/AO0</Value>
+   </Attribute>
+</AttributeSet>
+</Property>
+               <Property Name="FPGA.PersistentID" Type="Str">{F4C0A0AC-25AD-487F-AB3C-AE7C7781E19A}</Property>
+            </Item>
+            <Item Name="Bottom Ch. B" Type="Elemental IO">
+               <Property Name="eioAttrBag" Type="Xml"><AttributeSet name="FPGA Target">
+   <Attribute name="ArbitrationForOutputData">
+   <Value>NeverArbitrate</Value>
+   </Attribute>
+   <Attribute name="ArbitrationForOutputEnable">
+   <Value>NeverArbitrate</Value>
+   </Attribute>
+   <Attribute name="NumberOfSyncRegistersForOutputData">
+   <Value>1</Value>
+   </Attribute>
+   <Attribute name="NumberOfSyncRegistersForOutputEnable">
+   <Value>1</Value>
+   </Attribute>
+   <Attribute name="resource">
+   <Value>/Connector0/DIO0</Value>
+   </Attribute>
+</AttributeSet>
+</Property>
+               <Property Name="FPGA.PersistentID" Type="Str">{92FEF9A7-C43B-4BD5-99D4-163198A12B5A}</Property>
+            </Item>
+            <Item Name="Bottom Ch. A" Type="Elemental IO">
+               <Property Name="eioAttrBag" Type="Xml"><AttributeSet name="FPGA Target">
+   <Attribute name="ArbitrationForOutputData">
+   <Value>NeverArbitrate</Value>
+   </Attribute>
+   <Attribute name="ArbitrationForOutputEnable">
+   <Value>NeverArbitrate</Value>
+   </Attribute>
+   <Attribute name="NumberOfSyncRegistersForOutputData">
+   <Value>1</Value>
+   </Attribute>
+   <Attribute name="NumberOfSyncRegistersForOutputEnable">
+   <Value>1</Value>
+   </Attribute>
+   <Attribute name="resource">
+   <Value>/Connector0/DIO1</Value>
+   </Attribute>
+</AttributeSet>
+</Property>
+               <Property Name="FPGA.PersistentID" Type="Str">{5319D90E-080C-4D73-ACAF-5C98805C25A6}</Property>
+            </Item>
+            <Item Name="Middle Ch.  B" Type="Elemental IO">
+               <Property Name="eioAttrBag" Type="Xml"><AttributeSet name="FPGA Target">
+   <Attribute name="ArbitrationForOutputData">
+   <Value>NeverArbitrate</Value>
+   </Attribute>
+   <Attribute name="ArbitrationForOutputEnable">
+   <Value>NeverArbitrate</Value>
+   </Attribute>
+   <Attribute name="NumberOfSyncRegistersForOutputData">
+   <Value>1</Value>
+   </Attribute>
+   <Attribute name="NumberOfSyncRegistersForOutputEnable">
+   <Value>1</Value>
+   </Attribute>
+   <Attribute name="resource">
+   <Value>/Connector0/DIO2</Value>
+   </Attribute>
+</AttributeSet>
+</Property>
+               <Property Name="FPGA.PersistentID" Type="Str">{FF057AE7-43D7-45A0-9278-847D21FBE0C6}</Property>
+            </Item>
+            <Item Name="Middle Ch. A" Type="Elemental IO">
+               <Property Name="eioAttrBag" Type="Xml"><AttributeSet name="FPGA Target">
+   <Attribute name="ArbitrationForOutputData">
+   <Value>NeverArbitrate</Value>
+   </Attribute>
+   <Attribute name="ArbitrationForOutputEnable">
+   <Value>NeverArbitrate</Value>
+   </Attribute>
+   <Attribute name="NumberOfSyncRegistersForOutputData">
+   <Value>1</Value>
+   </Attribute>
+   <Attribute name="NumberOfSyncRegistersForOutputEnable">
+   <Value>1</Value>
+   </Attribute>
+   <Attribute name="resource">
+   <Value>/Connector0/DIO3</Value>
+   </Attribute>
+</AttributeSet>
+</Property>
+               <Property Name="FPGA.PersistentID" Type="Str">{AEEFDDA2-7559-4B4F-8CB7-723526D0AACD}</Property>
+            </Item>
+            <Item Name="Top Ch. B" Type="Elemental IO">
+               <Property Name="eioAttrBag" Type="Xml"><AttributeSet name="FPGA Target">
+   <Attribute name="ArbitrationForOutputData">
+   <Value>NeverArbitrate</Value>
+   </Attribute>
+   <Attribute name="ArbitrationForOutputEnable">
+   <Value>NeverArbitrate</Value>
+   </Attribute>
+   <Attribute name="NumberOfSyncRegistersForOutputData">
+   <Value>1</Value>
+   </Attribute>
+   <Attribute name="NumberOfSyncRegistersForOutputEnable">
+   <Value>1</Value>
+   </Attribute>
+   <Attribute name="resource">
+   <Value>/Connector0/DIO4</Value>
+   </Attribute>
+</AttributeSet>
+</Property>
+               <Property Name="FPGA.PersistentID" Type="Str">{354390E7-FFA4-46CF-96E3-148C93047183}</Property>
+            </Item>
+            <Item Name="Top Ch. A" Type="Elemental IO">
+               <Property Name="eioAttrBag" Type="Xml"><AttributeSet name="FPGA Target">
+   <Attribute name="ArbitrationForOutputData">
+   <Value>NeverArbitrate</Value>
+   </Attribute>
+   <Attribute name="ArbitrationForOutputEnable">
+   <Value>NeverArbitrate</Value>
+   </Attribute>
+   <Attribute name="NumberOfSyncRegistersForOutputData">
+   <Value>1</Value>
+   </Attribute>
+   <Attribute name="NumberOfSyncRegistersForOutputEnable">
+   <Value>1</Value>
+   </Attribute>
+   <Attribute name="resource">
+   <Value>/Connector0/DIO5</Value>
+   </Attribute>
+</AttributeSet>
+</Property>
+               <Property Name="FPGA.PersistentID" Type="Str">{D4AC17E4-E54E-4C84-A9D4-F4A98A7240DE}</Property>
+            </Item>
+         </Item>
+         <Item Name="40 MHz Onboard Clock" Type="FPGA Base Clock">
+            <Property Name="FPGA.PersistentID" Type="Str">{C69F1E6A-3BA4-4412-837E-20008084BCDF}</Property>
+            <Property Name="NI.LV.FPGA.BaseTSConfig" Type="Bin">###!!A!!!")!&amp;E!Q`````QV3:8.P&gt;8*D:3"/97VF!"R!-0````]36'^Q)&amp;.J:WZB&lt;#"$&lt;WZO:7.U!!!;1$$`````%5.M&lt;W.L)&amp;.J:WZB&lt;#"/97VF!"B!#B*.;7YA2H*F=86F&lt;G.Z)#B)?CE!!"B!#B*.98AA2H*F=86F&lt;G.Z)#B)?CE!!"B!)2*798*J97*M:3"'=G6R&gt;76O9XE!!"R!#B:/&lt;WVJ&lt;G&amp;M)%:S:8&amp;V:7ZD?3!I3(IJ!!!=1!I85'6B;S"1:8*J&lt;W1A3GFU&gt;'6S)#BQ=SE!(%!+&amp;UVJ&lt;C"%&gt;82Z)%.Z9WRF)#AF)%BJ:WAJ!"R!#B&gt;.98AA2(6U?3"$?7.M:3!I*3");7&gt;I+1!51!I/17.D&gt;8*B9XEA+("Q&lt;3E!!"*!)1R'=G6F)&amp;*V&lt;GZJ&lt;G=!!"2!)1^4=(*F971A5X"F9X2S&gt;7U!%E!Q`````QB$&lt;'^D;S"*2!!!/%"!!!(`````!!UK5G6M982F:#"$&lt;'^D;X-A&gt;WFU;#"O&lt;S"$2%-A9W^N=(-A&lt;G6D:8.T98*Z!!!31&amp;--2W6O:8*J9S"%982B!!!/1$$`````"5&amp;M;7&amp;T!']!]1!!!!!!!!!")'ZJ=H:J1G&amp;T:624382F&lt;5.P&lt;G:J:X6S982J&lt;WYO9X2M!%6!5!!1!!!!!1!#!!-!"!!&amp;!!9!"Q!)!!E!#A!,!!Q!$A!0!"!&lt;1X6S=G6O&gt;#"$&lt;'^D;S"$&lt;WZG;7&gt;V=G&amp;U;7^O!!%!%1!!!"1U-#".3(IA4WZC&lt;W&amp;S:#"$&lt;'^D;Q!!!!6$&lt;'MU-!!!!!6$&lt;'MU-%'$%N!!!!!!19-3U!!!!!!!19-3U!!!!!"!&lt;U!!!!!!!%"*!!!!!!!!1%E!!!!!!!"!71!!!!!!!!%!!!!!!!AAA!)!!!!"!!1!!!!"!!!!!!!!!!!!&amp;$1Q)%V)?C"0&lt;G*P98*E)%.M&lt;W.L!!!!!!</Property>
+            <Property Name="NI.LV.FPGA.Valid" Type="Bool">true</Property>
+            <Property Name="NI.LV.FPGA.Version" Type="Int">2</Property>
+         </Item>
+         <Item Name="encoder.vi" Type="VI" URL="encoder.vi">
+            <Property Name="configString.guid" Type="Str">{321F7377-8F9B-4971-BF24-179E2DC0085C}"Depth=8191;Width=4;Dir=0;Strategy=1;Read Arbs=None;Write Arbs=Optimize For Single;Type=2;Channel=0;Write=0Voltage-In-FIFO"{354390E7-FFA4-46CF-96E3-148C93047183}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO4;0{5319D90E-080C-4D73-ACAF-5C98805C25A6}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO1;0{92FEF9A7-C43B-4BD5-99D4-163198A12B5A}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO0;0{A3EDA5A7-20DC-4CD0-91C6-F18B67C8EB7F}"Depth=16383;Width=4;Dir=0;Strategy=1;Read Arbs=Optimize For Single;Write Arbs=Optimize For Single;Type=2;Channel=1;Write=1Angle-Out-FIFO"{AEEFDDA2-7559-4B4F-8CB7-723526D0AACD}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO3;0{C69F1E6A-3BA4-4412-837E-20008084BCDF}###!!A!!!")!&amp;E!Q`````QV3:8.P&gt;8*D:3"/97VF!"R!-0````]36'^Q)&amp;.J:WZB&lt;#"$&lt;WZO:7.U!!!;1$$`````%5.M&lt;W.L)&amp;.J:WZB&lt;#"/97VF!"B!#B*.;7YA2H*F=86F&lt;G.Z)#B)?CE!!"B!#B*.98AA2H*F=86F&lt;G.Z)#B)?CE!!"B!)2*798*J97*M:3"'=G6R&gt;76O9XE!!"R!#B:/&lt;WVJ&lt;G&amp;M)%:S:8&amp;V:7ZD?3!I3(IJ!!!=1!I85'6B;S"1:8*J&lt;W1A3GFU&gt;'6S)#BQ=SE!(%!+&amp;UVJ&lt;C"%&gt;82Z)%.Z9WRF)#AF)%BJ:WAJ!"R!#B&gt;.98AA2(6U?3"$?7.M:3!I*3");7&gt;I+1!51!I/17.D&gt;8*B9XEA+("Q&lt;3E!!"*!)1R'=G6F)&amp;*V&lt;GZJ&lt;G=!!"2!)1^4=(*F971A5X"F9X2S&gt;7U!%E!Q`````QB$&lt;'^D;S"*2!!!/%"!!!(`````!!UK5G6M982F:#"$&lt;'^D;X-A&gt;WFU;#"O&lt;S"$2%-A9W^N=(-A&lt;G6D:8.T98*Z!!!31&amp;--2W6O:8*J9S"%982B!!!/1$$`````"5&amp;M;7&amp;T!']!]1!!!!!!!!!")'ZJ=H:J1G&amp;T:624382F&lt;5.P&lt;G:J:X6S982J&lt;WYO9X2M!%6!5!!1!!!!!1!#!!-!"!!&amp;!!9!"Q!)!!E!#A!,!!Q!$A!0!"!&lt;1X6S=G6O&gt;#"$&lt;'^D;S"$&lt;WZG;7&gt;V=G&amp;U;7^O!!%!%1!!!"1U-#".3(IA4WZC&lt;W&amp;S:#"$&lt;'^D;Q!!!!6$&lt;'MU-!!!!!6$&lt;'MU-%'$%N!!!!!!19-3U!!!!!!!19-3U!!!!!"!&lt;U!!!!!!!%"*!!!!!!!!1%E!!!!!!!"!71!!!!!!!!%!!!!!!!AAA!)!!!!"!!1!!!!"!!!!!!!!!!!!&amp;$1Q)%V)?C"0&lt;G*P98*E)%.M&lt;W.L!!!!!!{D4AC17E4-E54E-4C84-A9D4-F4A98A7240DE}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO5;0{F4C0A0AC-25AD-487F-AB3C-AE7C7781E19A}Arbitration=AlwaysArbitrate;resource=/Connector0/AO0;0{FF057AE7-43D7-45A0-9278-847D21FBE0C6}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO2;0PCI-7831R/Clk40/40 MHz Onboard ClockfalseTARGET_TYPEFPGA</Property>
+            <Property Name="configString.name" Type="Str">40 MHz Onboard Clock###!!A!!!")!&amp;E!Q`````QV3:8.P&gt;8*D:3"/97VF!"R!-0````]36'^Q)&amp;.J:WZB&lt;#"$&lt;WZO:7.U!!!;1$$`````%5.M&lt;W.L)&amp;.J:WZB&lt;#"/97VF!"B!#B*.;7YA2H*F=86F&lt;G.Z)#B)?CE!!"B!#B*.98AA2H*F=86F&lt;G.Z)#B)?CE!!"B!)2*798*J97*M:3"'=G6R&gt;76O9XE!!"R!#B:/&lt;WVJ&lt;G&amp;M)%:S:8&amp;V:7ZD?3!I3(IJ!!!=1!I85'6B;S"1:8*J&lt;W1A3GFU&gt;'6S)#BQ=SE!(%!+&amp;UVJ&lt;C"%&gt;82Z)%.Z9WRF)#AF)%BJ:WAJ!"R!#B&gt;.98AA2(6U?3"$?7.M:3!I*3");7&gt;I+1!51!I/17.D&gt;8*B9XEA+("Q&lt;3E!!"*!)1R'=G6F)&amp;*V&lt;GZJ&lt;G=!!"2!)1^4=(*F971A5X"F9X2S&gt;7U!%E!Q`````QB$&lt;'^D;S"*2!!!/%"!!!(`````!!UK5G6M982F:#"$&lt;'^D;X-A&gt;WFU;#"O&lt;S"$2%-A9W^N=(-A&lt;G6D:8.T98*Z!!!31&amp;--2W6O:8*J9S"%982B!!!/1$$`````"5&amp;M;7&amp;T!']!]1!!!!!!!!!")'ZJ=H:J1G&amp;T:624382F&lt;5.P&lt;G:J:X6S982J&lt;WYO9X2M!%6!5!!1!!!!!1!#!!-!"!!&amp;!!9!"Q!)!!E!#A!,!!Q!$A!0!"!&lt;1X6S=G6O&gt;#"$&lt;'^D;S"$&lt;WZG;7&gt;V=G&amp;U;7^O!!%!%1!!!"1U-#".3(IA4WZC&lt;W&amp;S:#"$&lt;'^D;Q!!!!6$&lt;'MU-!!!!!6$&lt;'MU-%'$%N!!!!!!19-3U!!!!!!!19-3U!!!!!"!&lt;U!!!!!!!%"*!!!!!!!!1%E!!!!!!!"!71!!!!!!!!%!!!!!!!AAA!)!!!!"!!1!!!!"!!!!!!!!!!!!&amp;$1Q)%V)?C"0&lt;G*P98*E)%.M&lt;W.L!!!!!!Angle-Out-FIFO"Depth=16383;Width=4;Dir=0;Strategy=1;Read Arbs=Optimize For Single;Write Arbs=Optimize For Single;Type=2;Channel=1;Write=1Angle-Out-FIFO"Bottom Ch. AArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO1;0Bottom Ch. BArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO0;0Middle Ch.  BArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO2;0Middle Ch. AArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO3;0Motor OutputArbitration=AlwaysArbitrate;resource=/Connector0/AO0;0PCI-7831R/Clk40/40 MHz Onboard ClockfalseTARGET_TYPEFPGATop Ch. AArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO5;0Top Ch. BArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO4;0Voltage-In-FIFO"Depth=8191;Width=4;Dir=0;Strategy=1;Read Arbs=None;Write Arbs=Optimize For Single;Type=2;Channel=0;Write=0Voltage-In-FIFO"</Property>
+         </Item>
+         <Item Name="systemid-fpga-interface.vi" Type="VI" URL="systemid-fpga-interface.vi">
+            <Property Name="configString.guid" Type="Str">{321F7377-8F9B-4971-BF24-179E2DC0085C}"Depth=8191;Width=4;Dir=0;Strategy=1;Read Arbs=None;Write Arbs=Optimize For Single;Type=2;Channel=0;Write=0Voltage-In-FIFO"{354390E7-FFA4-46CF-96E3-148C93047183}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO4;0{5319D90E-080C-4D73-ACAF-5C98805C25A6}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO1;0{92FEF9A7-C43B-4BD5-99D4-163198A12B5A}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO0;0{A3EDA5A7-20DC-4CD0-91C6-F18B67C8EB7F}"Depth=16383;Width=4;Dir=0;Strategy=1;Read Arbs=Optimize For Single;Write Arbs=Optimize For Single;Type=2;Channel=1;Write=1Angle-Out-FIFO"{AEEFDDA2-7559-4B4F-8CB7-723526D0AACD}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO3;0{C69F1E6A-3BA4-4412-837E-20008084BCDF}###!!A!!!")!&amp;E!Q`````QV3:8.P&gt;8*D:3"/97VF!"R!-0````]36'^Q)&amp;.J:WZB&lt;#"$&lt;WZO:7.U!!!;1$$`````%5.M&lt;W.L)&amp;.J:WZB&lt;#"/97VF!"B!#B*.;7YA2H*F=86F&lt;G.Z)#B)?CE!!"B!#B*.98AA2H*F=86F&lt;G.Z)#B)?CE!!"B!)2*798*J97*M:3"'=G6R&gt;76O9XE!!"R!#B:/&lt;WVJ&lt;G&amp;M)%:S:8&amp;V:7ZD?3!I3(IJ!!!=1!I85'6B;S"1:8*J&lt;W1A3GFU&gt;'6S)#BQ=SE!(%!+&amp;UVJ&lt;C"%&gt;82Z)%.Z9WRF)#AF)%BJ:WAJ!"R!#B&gt;.98AA2(6U?3"$?7.M:3!I*3");7&gt;I+1!51!I/17.D&gt;8*B9XEA+("Q&lt;3E!!"*!)1R'=G6F)&amp;*V&lt;GZJ&lt;G=!!"2!)1^4=(*F971A5X"F9X2S&gt;7U!%E!Q`````QB$&lt;'^D;S"*2!!!/%"!!!(`````!!UK5G6M982F:#"$&lt;'^D;X-A&gt;WFU;#"O&lt;S"$2%-A9W^N=(-A&lt;G6D:8.T98*Z!!!31&amp;--2W6O:8*J9S"%982B!!!/1$$`````"5&amp;M;7&amp;T!']!]1!!!!!!!!!")'ZJ=H:J1G&amp;T:624382F&lt;5.P&lt;G:J:X6S982J&lt;WYO9X2M!%6!5!!1!!!!!1!#!!-!"!!&amp;!!9!"Q!)!!E!#A!,!!Q!$A!0!"!&lt;1X6S=G6O&gt;#"$&lt;'^D;S"$&lt;WZG;7&gt;V=G&amp;U;7^O!!%!%1!!!"1U-#".3(IA4WZC&lt;W&amp;S:#"$&lt;'^D;Q!!!!6$&lt;'MU-!!!!!6$&lt;'MU-%'$%N!!!!!!19-3U!!!!!!!19-3U!!!!!"!&lt;U!!!!!!!%"*!!!!!!!!1%E!!!!!!!"!71!!!!!!!!%!!!!!!!AAA!)!!!!"!!1!!!!"!!!!!!!!!!!!&amp;$1Q)%V)?C"0&lt;G*P98*E)%.M&lt;W.L!!!!!!{D4AC17E4-E54E-4C84-A9D4-F4A98A7240DE}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO5;0{F4C0A0AC-25AD-487F-AB3C-AE7C7781E19A}Arbitration=AlwaysArbitrate;resource=/Connector0/AO0;0{FF057AE7-43D7-45A0-9278-847D21FBE0C6}ArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO2;0PCI-7831R/Clk40/40 MHz Onboard ClockfalseTARGET_TYPEFPGA</Property>
+            <Property Name="configString.name" Type="Str">40 MHz Onboard Clock###!!A!!!")!&amp;E!Q`````QV3:8.P&gt;8*D:3"/97VF!"R!-0````]36'^Q)&amp;.J:WZB&lt;#"$&lt;WZO:7.U!!!;1$$`````%5.M&lt;W.L)&amp;.J:WZB&lt;#"/97VF!"B!#B*.;7YA2H*F=86F&lt;G.Z)#B)?CE!!"B!#B*.98AA2H*F=86F&lt;G.Z)#B)?CE!!"B!)2*798*J97*M:3"'=G6R&gt;76O9XE!!"R!#B:/&lt;WVJ&lt;G&amp;M)%:S:8&amp;V:7ZD?3!I3(IJ!!!=1!I85'6B;S"1:8*J&lt;W1A3GFU&gt;'6S)#BQ=SE!(%!+&amp;UVJ&lt;C"%&gt;82Z)%.Z9WRF)#AF)%BJ:WAJ!"R!#B&gt;.98AA2(6U?3"$?7.M:3!I*3");7&gt;I+1!51!I/17.D&gt;8*B9XEA+("Q&lt;3E!!"*!)1R'=G6F)&amp;*V&lt;GZJ&lt;G=!!"2!)1^4=(*F971A5X"F9X2S&gt;7U!%E!Q`````QB$&lt;'^D;S"*2!!!/%"!!!(`````!!UK5G6M982F:#"$&lt;'^D;X-A&gt;WFU;#"O&lt;S"$2%-A9W^N=(-A&lt;G6D:8.T98*Z!!!31&amp;--2W6O:8*J9S"%982B!!!/1$$`````"5&amp;M;7&amp;T!']!]1!!!!!!!!!")'ZJ=H:J1G&amp;T:624382F&lt;5.P&lt;G:J:X6S982J&lt;WYO9X2M!%6!5!!1!!!!!1!#!!-!"!!&amp;!!9!"Q!)!!E!#A!,!!Q!$A!0!"!&lt;1X6S=G6O&gt;#"$&lt;'^D;S"$&lt;WZG;7&gt;V=G&amp;U;7^O!!%!%1!!!"1U-#".3(IA4WZC&lt;W&amp;S:#"$&lt;'^D;Q!!!!6$&lt;'MU-!!!!!6$&lt;'MU-%'$%N!!!!!!19-3U!!!!!!!19-3U!!!!!"!&lt;U!!!!!!!%"*!!!!!!!!1%E!!!!!!!"!71!!!!!!!!%!!!!!!!AAA!)!!!!"!!1!!!!"!!!!!!!!!!!!&amp;$1Q)%V)?C"0&lt;G*P98*E)%.M&lt;W.L!!!!!!Angle-Out-FIFO"Depth=16383;Width=4;Dir=0;Strategy=1;Read Arbs=Optimize For Single;Write Arbs=Optimize For Single;Type=2;Channel=1;Write=1Angle-Out-FIFO"Bottom Ch. AArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO1;0Bottom Ch. BArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO0;0Middle Ch.  BArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO2;0Middle Ch. AArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO3;0Motor OutputArbitration=AlwaysArbitrate;resource=/Connector0/AO0;0PCI-7831R/Clk40/40 MHz Onboard ClockfalseTARGET_TYPEFPGATop Ch. AArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO5;0Top Ch. BArbitrationForOutputData=NeverArbitrate;ArbitrationForOutputEnable=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForOutputEnable=1;resource=/Connector0/DIO4;0Voltage-In-FIFO"Depth=8191;Width=4;Dir=0;Strategy=1;Read Arbs=None;Write Arbs=Optimize For Single;Type=2;Channel=0;Write=0Voltage-In-FIFO"</Property>
+            <Property Name="NI.LV.FPGA.InterfaceBitfile" Type="Str">C:\Documents and Settings\Elliot Johnson\Desktop\controls\system-id-new\FPGA Bitfiles\system-id.lvproj_FPGA Target_systemid-fpga-inte~2D.lvbit</Property>
+         </Item>
+         <Item Name="Voltage-In-FIFO" Type="FPGA FIFO">
+            <Property Name="fifo.configuration" Type="Str">"Depth=8191;Width=4;Dir=0;Strategy=1;Read Arbs=None;Write Arbs=Optimize For Single;Type=2;Channel=0;Write=0Voltage-In-FIFO"</Property>
+            <Property Name="fifo.configured" Type="Bool">true</Property>
+            <Property Name="fifo.state" Type="Bin">###!!A!!!!U!$E!Q`````Q2/97VF!!!+1!=&amp;2'6Q&gt;'A!.1$R!!!!!!!!!!%92GFG&lt;V^%982B6(FQ:5.P&lt;H2S&lt;WQO9X2M!".!!AJ%982B)&amp;&gt;J:(2I!!!R!0%!!!!!!!!!!2*';7:P8U2J=G6D&gt;'FP&lt;CZD&gt;'Q!&amp;5!$$5:*2E^%;8*F9X2J&lt;WY!-!$R!!!!!!!!!!%42GFG&lt;V^*4V.U=G&amp;U:7&gt;Z,G.U&lt;!!51!%,35]A5X2S982F:XE!%E!Q`````QB73%2-4G&amp;N:1!!1!$RPAH!FA!!!!%:2GFG&lt;V^"=G*0=(2J&lt;WZT5X2S;7ZH,G.U&lt;!!?1$$`````%&amp;*F971A18*C)%^Q&gt;'FP&lt;H-!!%!!]&lt;Y*Q*9!!!!"'5:J:G^@18*C4X"U;7^O=V.U=GFO:SZD&gt;'Q!(E!Q`````R&amp;8=GFU:3""=G)A4X"U;7^O=Q!L!0%!!!!!!!!!!2"';7:P8UVF&lt;62Z='5O9X2M!"&amp;!!AB315UA&gt;(FQ:1!!%%!(#U2.13"$;'&amp;O&lt;G6M!!R!)1:8=GFU:4]!!!J!)16-&lt;W.B&lt;!"&amp;!0'`[U5V!!!!!1Z';7:P8V.U982F,G.U&lt;!!N1&amp;!!$!!!!!%!!A!$!!1!"1!'!!=!#!!*!!I!#QJ';7:P)&amp;.U982F!!!"!!Q!!!!06G^M&gt;'&amp;H:3V*&lt;CV'35:0!!!@`Q!%!!!!!!%!!!!W6G^M&gt;'&amp;H:7&amp;*&lt;G&amp;'35:08T)Q.T%X.T%Y-DAU.T1R.$9R-T9T.D%X-T%T.4-T-41Q-4!Q-D%Q!!!!"%ZP&lt;G5!!!!44X"U;7VJ?G5A2G^S)&amp;.J&lt;G&gt;M:1!#!!!!!!!!!!!!!!</Property>
+            <Property Name="fifo.version" Type="UInt">5</Property>
+            <Property Name="FPGA.PersistentID" Type="Str">{321F7377-8F9B-4971-BF24-179E2DC0085C}</Property>
+         </Item>
+         <Item Name="Angle-Out-FIFO" Type="FPGA FIFO">
+            <Property Name="fifo.configuration" Type="Str">"Depth=16383;Width=4;Dir=0;Strategy=1;Read Arbs=Optimize For Single;Write Arbs=Optimize For Single;Type=2;Channel=1;Write=1Angle-Out-FIFO"</Property>
+            <Property Name="fifo.configured" Type="Bool">true</Property>
+            <Property Name="fifo.state" Type="Bin">###!!A!!!!U!$E!Q`````Q2/97VF!!!+1!=&amp;2'6Q&gt;'A!.1$R!!!!!!!!!!%92GFG&lt;V^%982B6(FQ:5.P&lt;H2S&lt;WQO9X2M!".!!AJ%982B)&amp;&gt;J:(2I!!!R!0%!!!!!!!!!!2*';7:P8U2J=G6D&gt;'FP&lt;CZD&gt;'Q!&amp;5!$$5:*2E^%;8*F9X2J&lt;WY!-!$R!!!!!!!!!!%42GFG&lt;V^*4V.U=G&amp;U:7&gt;Z,G.U&lt;!!51!%,35]A5X2S982F:XE!%E!Q`````QB73%2-4G&amp;N:1!!1!$RPAH!FA!!!!%:2GFG&lt;V^"=G*0=(2J&lt;WZT5X2S;7ZH,G.U&lt;!!?1$$`````%&amp;*F971A18*C)%^Q&gt;'FP&lt;H-!!%!!]&lt;Y*Q*9!!!!"'5:J:G^@18*C4X"U;7^O=V.U=GFO:SZD&gt;'Q!(E!Q`````R&amp;8=GFU:3""=G)A4X"U;7^O=Q!L!0%!!!!!!!!!!2"';7:P8UVF&lt;62Z='5O9X2M!"&amp;!!AB315UA&gt;(FQ:1!!%%!(#U2.13"$;'&amp;O&lt;G6M!!R!)1:8=GFU:4]!!!J!)16-&lt;W.B&lt;!"&amp;!0'`[U5V!!!!!1Z';7:P8V.U982F,G.U&lt;!!N1&amp;!!$!!!!!%!!A!$!!1!"1!'!!=!#!!*!!I!#QJ';7:P)&amp;.U982F!!!"!!Q!!!!/17ZH&lt;'5N4X6U,5:*2E]!!$``!!1!!!!!!1!!!$J"&lt;G&gt;M:7&amp;0&gt;82B2EF'4V]S.$=S-4=R.4=R-D5W.$)R.T9R-49R-49R.$AR-T1R.D=R-49R-D=S-4=T!!!!%U^Q&gt;'FN;8JF)%:P=C"4;7ZH&lt;'5!!!!44X"U;7VJ?G5A2G^S)&amp;.J&lt;G&gt;M:1!#!!!!!1%!!!!!!!</Property>
+            <Property Name="fifo.version" Type="UInt">5</Property>
+            <Property Name="FPGA.PersistentID" Type="Str">{A3EDA5A7-20DC-4CD0-91C6-F18B67C8EB7F}</Property>
+         </Item>
+         <Item Name="Dependencies" Type="Dependencies"/>
+         <Item Name="Build Specifications" Type="Build"/>
+      </Item>
+      <Item Name="systemid-hardware-recorder.vi" Type="VI" URL="systemid-hardware-recorder.vi"/>
+      <Item Name="systemid-hardware-analyzer.vi" Type="VI" URL="systemid-hardware-analyzer.vi"/>
+      <Item Name="systemid-parameters-recorder.vi" Type="VI" URL="systemid-parameters-recorder.vi"/>
+      <Item Name="torsional-fpga-interface.lvbit" Type="Document" URL="torsional-fpga-interface.lvbit"/>
+      <Item Name="systemid-parameters-analyzer.vi" Type="VI" URL="systemid-parameters-analyzer.vi"/>
+      <Item Name="Dependencies" Type="Dependencies"/>
+      <Item Name="Build Specifications" Type="Build"/>
+   </Item>
+</Project>

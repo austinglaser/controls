@@ -1,0 +1,148 @@
+\fancyhf{}
+\fancyfoot[L]{\textbf{ECEN 4638--T.D. Murphey}}
+\fancyfoot[R]{\textbf{Lab \#5}}
+\fancyfoot[C]{\vspace{.2in}\thepage}
+
+\chapter{Lab \#5:  Root Locus Design} 
+
+\begin{center}  \textbf{Objective}
+\end{center}
+
+The purpose of this lab is to use the EPS Torsional Disk System (TDS) to learn
+how to apply root locus techniques to a real, physical system.  You have already
+seen how PID works on the system in the last lab.  Now, you are going to see
+some of your experience validated analytically by analyzing the root locus for
+the ECP system.
+
+The lab will consist of three main components.  First, you will determine the
+hardware gain that you think is appropriate for the system and what error bounds
+are appropriate for the parameters we are using.  Second, you will determine the
+root locus for the system given the ``collocated'' outputs (the outputs that are
+located at the same place as the input) and the ``noncollocated'' outputs (the
+outputs that are located somewhere other than the input location).  (This will
+help you see why stabilizing the top disk is intrinsically harder than
+stabilizing the bottom disk.)  Lastly, you will iteratively determine what
+``good'' values of a PID controller are based on the root locus.
+
+
+\vspace{.2in}
+
+\begin{center} \textsc{Note that this lab will be a two-week lab.}
+\end{center}
+
+\begin{center} \textbf{Warning:} 
+\end{center}
+
+As usual, please always run the ECP unit with someone holding the power button,
+in case something happens to go wrong.
+
+\newpage
+\section{Pre-Lab Tasks}
+
+Read this \textbf{entire} document before starting the lab.  Aside from that, you may
+wish to create a VI that will take the model of your system and plot a root
+locus (see Section~\ref{sec-rootlocus}).  I strongly recommend that you use your
+state-space representation for this purpose.  However, you may use either the
+state-space or transfer function representations, as you see fit.
+
+\section{Tasks}
+
+\subsection{Task \#1--Making Sure Your Simulation Works}
+
+The purpose of this part of the lab is to make sure that your simulation is
+reasonably related to the real physical system.  
+
+\noindent \textbf{Task:}  Using the hardware template, make sure that you are 
+running the experimental system with a time steps of 0.01 s.
+
+\noindent \textbf{Task:}  Run the experiment in one VI and  the simulation in 
+another VI.  I would recommend a closed-loop step response of roughly
+$\frac{\pi}{2}$ rad and an open-loop pulse of 0.3 Nm for 0.5 s would probably be a
+good combination.  Make sure that your simulation and the experiment
+have roughly the same behavior.  If necessary adjust the hardware gain
+block to make your simulation match the experimental behavior as
+closely as possible.
+
+\subsection{Task \#2--Root Loci for Disk 1 and Disk 3 Outputs}
+
+\noindent \textbf{Task:} Draw a block diagram that represents the system with a
+proportional controller.  Label all the blocks and all the lines that connect
+the blocks.  Lastly, give the physical units for each line.  
+
+\noindent \textbf{Task:} In LabVIEW, create the root locus for each output (disk 1  and
+3).  Which system is ``more'' stable using proportional feedback?  Defend your
+answer.  Test this hypothesis experimentally.  For each disk, experimentally
+estimate the value of $K$ where the system destabilizes.  You may approach this
+estimation problem in whatever way you find most convenient--just detail it in
+your writeup.
+
+\noindent \textbf{Task:} Now assume that you have a PD controller of the form
+$C(s)=K(1+K_Ds)$ so that $K_D$ represents that \emph{ratio} of the damping to
+the gain.  Assuming that $K_D$ varies from 0 to 1, plot the root locus for five
+relevent ratios that you choose.  (Again, do this for both disk 1 and disk 3
+outputs.)  What is the best choice from your perspective?  Defend your rational
+of your choice and test it experimentally.  Explain your experimental results.
+
+\noindent \textbf{Task:}  Based on the root locus of your choice of ratio, 
+try to estimate what value of $K$ and $K_D$ would give a rise time of 1 second
+and less than 30\% overshoot.  (Yes, again for for both disk 1 and disk 3 as
+outputs.)  To do this, you may wish to use the ``Interactive Root Locus''
+that allows you to see how the poles change as the gain $K$ varies.  Implement
+your design in hardware.  How close do you get?
+
+\noindent \textbf{Task:}  Based on the root locus for each output and your
+choice of $K$ and $K_D$, can you add an integral term $K_I$ to your PID
+controller in order to get rid of steady-state error?
+
+\subsection{Task \#3--Lead/Lag Controller}
+
+\noindent \textbf{Task:}  We know that PID controllers can be approximated by
+``Lead/Lag'' controllers.  How does your root locus analysis change if you
+replace the PID controller with a Lead/Lag controller?  
+
+\subsection{Task \#4--Root Loci for Uncertainties}
+
+\noindent \textbf{Task:}  For your choice of $K$ and $K_D$ above, plot the root 
+locus for two parameters you think introduce the largest amount of uncertainty.
+For instance, you can plot the root locus with respect to $c_1$ and with respect
+to $k_1$, if you think these add the most uncertainty.  You may find
+\emph{Mathematica} or another symbolic toolbox helpful for this problem.
+
+\noindent \textbf{Task:}  Based on the root locus, do these  parameters
+represent a threat to the stability of the system (for either disk 1 or disk 3
+as outputs)?
+
+\noindent \textbf{Task:}  Based on the root locus, how do these parameters affect
+the performance of the system?
+
+\subsection{Task \#5--Design for and Difficulties with Disk 3}
+
+\noindent \textbf{Task:}  Can you design a different compensator (perhaps with
+imaginary poles) that makes the system stable with better performance?  Can you
+improve upon your PID controller performance?  Try this first using the root
+locus tool, then in simulation, and finally (if you are convinced you have a
+good design) try it in hardware.  If you didn't get a design you liked, discuss
+what the obstacles were and what you tried to use to overcome them.
+
+
+\section{Useful Things to Know}
+
+\begin{enumerate}
+\item The analysis section of the LabVIEW manual on Moodle has been updated
+to show you how to use LabVIEW's root locus tools.  
+
+\item We highly recommend using the new ``Torsional Plant Interface
+Template'' to access the FPGA.  The new template provides more information,
+better error checking, and doesn't need the Local Variable Feedback
+hack used in Lab 4.
+\end{enumerate}
+
+\vspace{0.2in}
+
+\noindent Remember, if you get stuck on some part of the lab, ask your
+classmates, the TA, or myself.
+
+
+%% Local Variables:
+%% TeX-master: "../LVmanual.tex"
+%% End:

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="14"
+   name=""
+   committed-date="2006-09-13T01:13:44.249195Z"
+   url="https://robotics.colorado.edu/svn/NImanual/mathscriptinsim"
+   last-author="murphey"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="14"
+   name="mathscriptinsimSS2TF.jpg"
+   text-time="2008-12-01T23:48:42.000000Z"
+   committed-date="2006-09-13T01:13:44.249195Z"
+   checksum="e31aa86fa32201af1e8d6e2335447c8f"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:42.000000Z"/>
+<entry
+   committed-rev="14"
+   name="mathscriptinsimSS.vi"
+   text-time="2008-12-01T23:48:42.000000Z"
+   committed-date="2006-09-13T01:13:44.249195Z"
+   checksum="101da56b38205a687567ffa59dc2c622"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:42.000000Z"/>
+<entry
+   committed-rev="14"
+   name="mathscriptinsimSS.jpg"
+   text-time="2008-12-01T23:48:42.000000Z"
+   committed-date="2006-09-13T01:13:44.249195Z"
+   checksum="e206b55c58dbfa57fd319f516bbc31dd"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:42.000000Z"/>
+<entry
+   committed-rev="14"
+   name="mathscriptinsimSS2TFdegenerate.jpg"
+   text-time="2008-12-01T23:48:42.000000Z"
+   committed-date="2006-09-13T01:13:44.249195Z"
+   checksum="8650d49842bf3036120a30902dac5648"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:42.000000Z"/>
+<entry
+   committed-rev="8"
+   name="Thumbs.db"
+   text-time="2008-12-01T23:48:42.000000Z"
+   committed-date="2006-09-08T10:40:50.899771Z"
+   checksum="5f1af9042f985c41e4decd2076a66e0b"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:42.000000Z"/>
+<entry
+   committed-rev="8"
+   name="mathscriptinsimTF.jpg"
+   text-time="2008-12-01T23:48:42.000000Z"
+   committed-date="2006-09-08T10:40:50.899771Z"
+   checksum="3e05abecfcace18920eb12d71fb18ee0"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:42.000000Z"/>
+<entry
+   committed-rev="8"
+   name="mathscriptinsim.vi"
+   text-time="2008-12-01T23:48:42.000000Z"
+   committed-date="2006-09-08T10:40:50.899771Z"
+   checksum="da592e999af5b2918245b273207b9c40"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:42.000000Z"/>
+<entry
+   committed-rev="14"
+   name="mathscriptinsimSS2TF.vi"
+   text-time="2008-12-01T23:48:42.000000Z"
+   committed-date="2006-09-13T01:13:44.249195Z"
+   checksum="56b072342d543f4c13e72b792801211a"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:42.000000Z"/>
+</wc-entries>
