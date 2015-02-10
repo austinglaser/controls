@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="10"
+   name=""
+   committed-date="2006-09-11T01:04:53.584693Z"
+   url="https://robotics.colorado.edu/svn/NImanual/simulation"
+   last-author="murphey"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="6"
+   name="palette2.jpg"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-05T00:33:02.833788Z"
+   checksum="b72ed2c7a940164f8e006fc47a526476"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="5"
+   name="simmodsimple.jpg"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-05T00:30:34.253151Z"
+   checksum="4d33649c91d0b41d018e881c3d3a1dbc"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="5"
+   name="simpleloop.jpg"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-05T00:30:34.253151Z"
+   checksum="c2e6fd339513866d3cfe850ccd13953f"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="10"
+   name="main.tex"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-11T01:04:53.584693Z"
+   checksum="88c87dde1eed7e55a8c08453099934aa"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="5"
+   name="simparams.jpg"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-05T00:30:34.253151Z"
+   checksum="991f56a4c16b80046a6b9bfb85228f6a"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+</wc-entries>

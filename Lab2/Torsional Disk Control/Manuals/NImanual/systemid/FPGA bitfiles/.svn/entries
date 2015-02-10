@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="44"
+   name=""
+   committed-date="2006-12-06T04:59:04.895437Z"
+   url="https://robotics.colorado.edu/svn/NImanual/systemid/FPGA%20bitfiles"
+   last-author="erjohnso"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="44"
+   name="system-id.lvproj_FPGA Target_systemid-fpga-inte~2D.lvbit"
+   text-time="2008-12-01T23:48:33.000000Z"
+   committed-date="2006-12-06T04:59:04.895437Z"
+   checksum="33d5d0c00d621f8d9178b4ba4c0b48af"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:33.000000Z"/>
+</wc-entries>

@@ -1,0 +1,109 @@
+\fancyhf{}
+\fancyfoot[L]{\textbf{ECEN 4638--T.D. Murphey}}
+\fancyfoot[R]{\textbf{Lab \#6}}
+\fancyfoot[C]{\vspace{.2in}\thepage}
+
+\chapter{Lab \#6: Frequency Domain Compensator Design}
+
+\begin{center}  \textbf{Objective}
+\end{center}
+
+The purpose of this lab is to expose you to frequency domain design techniques.
+In particular, you will use Bode plots and Nyquist plots to determine the
+stability and robustness of a design.  Because you are now all largely familiar
+with LabVIEW, the description of this lab will be kept rather brief.  However,
+keep in mind that this is nevertheless a reasonably long lab\textendash don't put off the
+work until the second week!
+
+
+
+
+\vspace{.2in}
+
+\begin{center} \textsc{Note that this lab will be a two-week lab.}
+\end{center}
+
+\begin{center} \textbf{Warning:} 
+\end{center}
+
+As usual, please always run the ECP unit with someone holding the power button,
+in case something happens to go wrong.
+
+\newpage
+\section{Pre-Lab Tasks}
+
+Read this entire document before starting the lab.  A significant part of this
+lab can be completed without hardware, so I recommend you complete as much of it
+as you can before coming to lab.
+\section{Tasks}
+
+
+
+
+
+
+\subsection{Task \#1--Lead Controller for Disk 1}
+
+\noindent \textbf{Task:}  Design a Lead controller for Disk 1 as the output  
+and plot its root locus and its Bode plot.
+
+\noindent \textbf{Task:}  What is the associated gain margin (GM) and phase
+margin (PM)?
+
+\noindent \textbf{Task:}  How could you change your Lead controller to improve
+your margins?  Can you do so while simultaneously increasing your overall system
+gain?
+
+
+\subsection{Task \#2--Controller Design for Disk 3}
+
+\noindent \textbf{Task:}  What is difficult about using Disk 3 as the output
+instead of Disk 1?  What happens in the root locus if you try and use a Lead
+compensator in this case?
+
+\noindent \textbf{Task:}  Plot the Bode plot for the open loop system with the
+third disk as the output.  Is it stable?  How much gain $K$ will destabilize it,
+if $K$ comes from a proportional feedback controller with unitary feedback?
+
+\noindent \textbf{Task:}  Plot the Nyquist plot for the open loop system.  What
+does this tell you about the system stability?
+
+\noindent \textbf{Task:}  Print the Nyquist plot and Bode plot and draw the 
+gain margin and the phase margin into both plots for a particular value of $K$
+(a value close to what you used when you first stabilized this system with a
+proportional controller).
+
+\noindent \textbf{Task:}  Design a higher performance controller that allows you
+to push the overall system gain up higher while not destabilizing.  You may find
+the notion of a \emph{notch filter} to be useful here.  (This is described in
+FPE, and the entire description there you may find useful.)  Can you improve
+upon your PID controller performance?  In particular, make sure that you
+maintain your gain and phase margin at the ``reasonable level'' you just
+determined.  Test your design in simulation.  What do you think are limits on
+the performance that this system can achieve?
+
+\noindent \textbf{Task:}  
+At this stage, the SISO tool in MATLAB (command: \emph{sisotool}) will probably be very
+handy--you will probably want to take MathScript code and copy it to MATLAB.
+Use the SISO Tool in MATLAB to improve your controller design from the previous
+section.  When moving poles and zeros around, \emph{only} move the poles and
+zeros of your controller, not the plant itself!
+
+\noindent \textbf{Task:}  What is the gain margin and phase margin for your
+final controller design?
+
+
+\noindent \textbf{Task:}  Test your design in experiment.  If there are
+differences between the experiment and the simulation, explain them.  
+
+
+\vspace{0.2in}
+         
+
+\noindent Remember, if you get stuck on some part of the lab, ask your
+classmates, the TA, or myself.
+
+
+%% Local Variables:
+%% TeX-master: "../LVmanual.tex"
+%% End:

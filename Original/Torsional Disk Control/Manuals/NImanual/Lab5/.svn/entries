@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="37"
+   name=""
+   committed-date="2006-10-24T05:04:21.153959Z"
+   url="https://robotics.colorado.edu/svn/NImanual/Lab5"
+   last-author="murphey"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="37"
+   name="main.tex"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-10-24T05:04:21.153959Z"
+   checksum="1c38b61fd3bad2315db653d86b726b8d"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+</wc-entries>

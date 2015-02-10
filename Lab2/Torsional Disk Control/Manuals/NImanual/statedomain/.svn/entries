@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="49"
+   name=""
+   committed-date="2007-11-26T18:30:26.891260Z"
+   url="https://robotics.colorado.edu/svn/NImanual/statedomain"
+   last-author="erjohnso"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="40"
+   name="main.tex"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-11-28T22:35:47.764949Z"
+   checksum="3e49dd0b5bee49b1797f9bed0608e4c5"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:34.000000Z"/>
+<entry
+   committed-rev="39"
+   name="statespacesim1.jpg"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-11-27T22:51:57.982478Z"
+   checksum="30f68292e1579025bb69265eeba51677"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:34.000000Z"/>
+<entry
+   committed-rev="39"
+   name="statespacesim2.jpg"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-11-27T22:51:57.982478Z"
+   checksum="1b973212f0d18ae9232b1f290b9c8783"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:34.000000Z"/>
+<entry
+   committed-rev="39"
+   name="statespaceest.jpg"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-11-27T22:51:57.982478Z"
+   checksum="a2486da13e789684ba03e6447b55ea12"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:34.000000Z"/>
+<entry
+   name="state-space"
+   kind="dir"/>
+</wc-entries>

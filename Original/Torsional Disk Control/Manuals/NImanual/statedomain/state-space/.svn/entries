@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="49"
+   name=""
+   committed-date="2007-11-26T18:30:26.891260Z"
+   url="https://robotics.colorado.edu/svn/NImanual/statedomain/state-space"
+   last-author="erjohnso"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="43"
+   name="fullsystem-hardware.vi"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-12-06T04:19:28.573474Z"
+   checksum="a7eae1e3d10fc584b9f17df826bd7928"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:34.000000Z"/>
+<entry
+   committed-rev="49"
+   name="students-hardware.vi"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2007-11-26T18:30:26.891260Z"
+   checksum="525ab0e99802d237aabcd0b3f77e9eae"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:34.000000Z"/>
+<entry
+   committed-rev="39"
+   name="input-transform.vi"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-11-27T22:51:57.982478Z"
+   checksum="f3ad0c78e331d7dae9984ead72258793"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:34.000000Z"/>
+<entry
+   committed-rev="39"
+   name="200hz.png"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-11-27T22:51:57.982478Z"
+   checksum="6a04cc8a5f426cfdf5e61b1099215b1f"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:34.000000Z"/>
+<entry
+   committed-rev="39"
+   name="torsional-error-handler.vi"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-11-27T22:51:57.982478Z"
+   checksum="041c89df319efb26ed030bc368dc062d"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:35.000000Z"/>
+<entry
+   committed-rev="43"
+   name="fullsystem-estimator.vi"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-12-06T04:19:28.573474Z"
+   checksum="ca402c3b4f2c4c487b02de846605a2b9"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:35.000000Z"/>
+<entry
+   committed-rev="39"
+   name="500hz.png"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-11-27T22:51:57.982478Z"
+   checksum="ee13c4d05821f49d27ebe66d514c1239"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:34.000000Z"/>
+<entry
+   committed-rev="49"
+   name="students-estimator.vi"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2007-11-26T18:30:26.891260Z"
+   checksum="2491233bb1c5ef670b1fabde0c355c74"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:35.000000Z"/>
+<entry
+   committed-rev="43"
+   name="hardware-gain-st1.txt"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-12-06T04:19:28.573474Z"
+   checksum="ad6c2c17d0876263ea68fe31d08e6953"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:35.000000Z"/>
+<entry
+   committed-rev="43"
+   name="hardware-gain-st3.txt"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-12-06T04:19:28.573474Z"
+   checksum="ad6c2c17d0876263ea68fe31d08e6953"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:35.000000Z"/>
+<entry
+   committed-rev="43"
+   name="hardware-gain-st4.txt"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-12-06T04:19:28.573474Z"
+   checksum="ad6c2c17d0876263ea68fe31d08e6953"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:35.000000Z"/>
+<entry
+   committed-rev="49"
+   name="torsional-fpga-interface.lvbit"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2007-11-26T18:30:26.891260Z"
+   checksum="f68ea525aaebe15296b801686156d795"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:35.000000Z"/>
+<entry
+   committed-rev="39"
+   name="1000hz.png"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-11-27T22:51:57.982478Z"
+   checksum="fff45e4d949c8d91b3c972a4240e890b"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:35.000000Z"/>
+<entry
+   committed-rev="39"
+   name="fullsystem-simulation.vi"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-11-27T22:51:57.982478Z"
+   checksum="fe4987fbdb8a82835a65726907ce3464"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:35.000000Z"/>
+<entry
+   committed-rev="39"
+   name="students-simulation.vi"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-11-27T22:51:57.982478Z"
+   checksum="db2a69c59a65ff496949bfe663accad0"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:35.000000Z"/>
+<entry
+   committed-rev="43"
+   name="README.txt"
+   text-time="2008-12-01T23:48:35.000000Z"
+   committed-date="2006-12-06T04:19:28.573474Z"
+   checksum="f93e725e30fd263fd63131fc6d65fd07"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:35.000000Z"/>
+</wc-entries>
