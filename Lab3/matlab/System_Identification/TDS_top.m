@@ -1,4 +1,4 @@
-function [A,B,C,D,K,x0] = TDS(par,~)
+function [A,B,C,D,K,x0] = TDS_top(par,~)
 K1=par(1,1);
 J1=par(2,1);
 C1=par(3,1);
