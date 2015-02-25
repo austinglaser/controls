@@ -49,7 +49,7 @@ figure(2)
 compare(u_t_id_mid,TF_mid_est,Inf,opt)
 figure(3)
 compare(u_t_id_bot,TF_bot_est,Inf,opt)
-%getpvec(TF1_est)
+par = getpvec(TF_top_est)
 %advice(uin_tin_id);
 %% Grey Box Identification
 %{
@@ -63,15 +63,15 @@ J3=par(7,1);
 C3=par(8,1);
 kh=par(9,1);
 %}
-par = [2.7;
-       0.02;
-       0.01;
-       0.02;
-       2.7;
-       0.01;
-       0.02;
-       0.01;
-       1];
+% par = [2.7;
+%        0.02;
+%        0.01;
+%        0.02;
+%        2.7;
+%        0.01;
+%        0.02;
+%        0.01;
+%        2.35]
 aux = {};
 T = 0;
 sys1_grey_id_top = idgrey('TDS_top',par,'c',aux,T);
