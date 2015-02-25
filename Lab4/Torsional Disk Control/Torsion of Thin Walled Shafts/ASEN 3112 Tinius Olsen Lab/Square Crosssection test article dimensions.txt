@@ -1,0 +1,6 @@
+length =	12.8625	
+d = 	1	in
+t = 	0.05	in
+beta = 	0.333	
+Shear modulous =	3.75E+06	
+perimeter =	3.80E+00	

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="11"
+   name=""
+   committed-date="2006-09-11T20:06:18.522738Z"
+   url="https://robotics.colorado.edu/svn/NImanual/mathscript"
+   last-author="murphey"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="11"
+   name="main.tex"
+   text-time="2008-12-01T23:48:42.000000Z"
+   committed-date="2006-09-11T20:06:18.522738Z"
+   checksum="f149216cb7aaa99f2938244179299c66"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:42.000000Z"/>
+</wc-entries>

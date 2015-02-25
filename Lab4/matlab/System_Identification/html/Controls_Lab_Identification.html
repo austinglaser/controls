@@ -1,0 +1,205 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Controls_Lab_Identification</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-02-17"><meta name="DC.source" content="Controls_Lab_Identification.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Clear out everything</a></li><li><a href="#2">Bring in Data</a></li><li><a href="#3">Extract relevant experiments</a></li><li><a href="#4">Create Objects</a></li><li><a href="#5">Black Box Identification</a></li><li><a href="#6">Comparison for Black Box</a></li><li><a href="#7">Grey Box Identification</a></li><li><a href="#8">Comparison for Grey Box</a></li></ul></div><h2>Clear out everything<a name="1"></a></h2><pre class="codeinput">clear <span class="string">all</span>
+close <span class="string">all</span>
+clc
+</pre><h2>Bring in Data<a name="2"></a></h2><pre class="codeinput">load(<span class="string">'data_combined_new.mat'</span>)
+</pre><h2>Extract relevant experiments<a name="3"></a></h2><pre class="codeinput">top_experiments = [2];          <span class="comment">% Which experiments to use for top</span>
+mid_experiments = [2];          <span class="comment">% Which experiments to use for middle</span>
+bot_experiments = [2];          <span class="comment">% Which experiments to use for bottom</span>
+
+name_comb_bot   = name_comb_bot(:,top_experiments);
+name_comb_mid   = name_comb_mid(:,mid_experiments);
+name_comb_top   = name_comb_top(:,bot_experiments);
+
+y_comb_bot      = y_comb_bot(:,top_experiments);
+y_comb_mid      = y_comb_mid(:,mid_experiments);
+y_comb_top      = y_comb_top(:,bot_experiments);
+
+u_comb_bot      = u_comb_bot(:,top_experiments);
+u_comb_mid      = u_comb_mid(:,mid_experiments);
+u_comb_top      = u_comb_top(:,bot_experiments);
+
+intr_smpl_val_top = repmat({<span class="string">'zoh'</span>}, size(name_comb_top));
+intr_smpl_val_mid = repmat({<span class="string">'zoh'</span>}, size(name_comb_mid));
+intr_smpl_val_bot = repmat({<span class="string">'zoh'</span>}, size(name_comb_bot));
+</pre><h2>Create Objects<a name="4"></a></h2><pre class="codeinput">u_t_id_top = iddata(y_comb_top,u_comb_bot,[],<span class="string">'ExperimentName'</span>,name_comb_bot,<span class="string">'Domain'</span>,<span class="string">'Time'</span>,<span class="string">'SamplingInstants'</span>,t,<span class="string">'InterSample'</span>,intr_smpl_val_top,<span class="string">'TimeUnit'</span>,<span class="string">'seconds'</span>,<span class="string">'InputName'</span>,{<span class="string">'Torque'</span>},<span class="string">'InputUnit'</span>,{<span class="string">'Nm'</span>},<span class="string">'OutputName'</span>,{<span class="string">'Angular Position'</span>},<span class="string">'OutputUnit'</span>,{<span class="string">'Radians'</span>});
+u_t_id_mid = iddata(y_comb_mid,u_comb_mid,[],<span class="string">'ExperimentName'</span>,name_comb_mid,<span class="string">'Domain'</span>,<span class="string">'Time'</span>,<span class="string">'SamplingInstants'</span>,t,<span class="string">'InterSample'</span>,intr_smpl_val_mid,<span class="string">'TimeUnit'</span>,<span class="string">'seconds'</span>,<span class="string">'InputName'</span>,{<span class="string">'Torque'</span>},<span class="string">'InputUnit'</span>,{<span class="string">'Nm'</span>},<span class="string">'OutputName'</span>,{<span class="string">'Angular Position'</span>},<span class="string">'OutputUnit'</span>,{<span class="string">'Radians'</span>});
+u_t_id_bot = iddata(y_comb_bot,u_comb_bot,[],<span class="string">'ExperimentName'</span>,name_comb_top,<span class="string">'Domain'</span>,<span class="string">'Time'</span>,<span class="string">'SamplingInstants'</span>,t,<span class="string">'InterSample'</span>,intr_smpl_val_bot,<span class="string">'TimeUnit'</span>,<span class="string">'seconds'</span>,<span class="string">'InputName'</span>,{<span class="string">'Torque'</span>},<span class="string">'InputUnit'</span>,{<span class="string">'Nm'</span>},<span class="string">'OutputName'</span>,{<span class="string">'Angular Position'</span>},<span class="string">'OutputUnit'</span>,{<span class="string">'Radians'</span>});
+opt = compareOptions(<span class="string">'InitialCondition'</span>,<span class="string">'zero'</span>);
+</pre><h2>Black Box Identification<a name="5"></a></h2><pre class="codeinput">iodelay = NaN;
+TF_top_est=tfest(u_t_id_top,6,5,iodelay,<span class="string">'Feedthrough'</span>,<span class="string">'false'</span>);
+TF_mid_est=tfest(u_t_id_mid,6,5,iodelay,<span class="string">'Feedthrough'</span>,<span class="string">'false'</span>);
+TF_bot_est=tfest(u_t_id_bot,6,5,iodelay,<span class="string">'Feedthrough'</span>,<span class="string">'false'</span>);
+</pre><pre class="codeoutput">Warning: The "feedthrough" option is ignored for continuous-time estimation. Use
+NZ&lt;NP to enforce absence of feedthrough. 
+Warning: The "feedthrough" option is ignored for continuous-time estimation. Use
+NZ&lt;NP to enforce absence of feedthrough. 
+Warning: The "feedthrough" option is ignored for continuous-time estimation. Use
+NZ&lt;NP to enforce absence of feedthrough. 
+</pre><h2>Comparison for Black Box<a name="6"></a></h2><pre class="codeinput">figure(1)
+compare(u_t_id_top,TF_top_est,Inf,opt)
+figure(2)
+compare(u_t_id_mid,TF_mid_est,Inf,opt)
+figure(3)
+compare(u_t_id_bot,TF_bot_est,Inf,opt)
+<span class="comment">%getpvec(TF1_est)</span>
+<span class="comment">%advice(uin_tin_id);</span>
+</pre><img vspace="5" hspace="5" src="Controls_Lab_Identification_01.png" alt=""> <img vspace="5" hspace="5" src="Controls_Lab_Identification_02.png" alt=""> <img vspace="5" hspace="5" src="Controls_Lab_Identification_03.png" alt=""> <h2>Grey Box Identification<a name="7"></a></h2><pre class="codeinput"><span class="comment">%{
+</span><span class="comment">K1=par(1,1);
+</span><span class="comment">J1=par(2,1);
+</span><span class="comment">C1=par(3,1);
+</span><span class="comment">J2=par(4,1);
+</span><span class="comment">K2=par(5,1);
+</span><span class="comment">C2=par(6,1);
+</span><span class="comment">J3=par(7,1);
+</span><span class="comment">C3=par(8,1);
+</span><span class="comment">kh=par(9,1);
+</span><span class="comment">%}
+</span><span class="comment">% par = [2.7;0.02;0.01;0.02;2.7;0.01;0.02;0.01;1];</span>
+<span class="comment">% aux = {};</span>
+<span class="comment">% T = 0;</span>
+<span class="comment">% sys1_grey_id = idgrey('TDS',par,'c',aux,T);</span>
+<span class="comment">% sys1_grey_est = greyest(u_t_id_top,sys1_grey_id);</span>
+</pre><h2>Comparison for Grey Box<a name="8"></a></h2><p>figure(4) compare(u_t_id_top,sys1_grey_est,Inf,opt) getpvec(sys1_grey_est)</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Clear out everything
+clear all
+close all
+clc
+
+%% Bring in Data
+load('data_combined_new.mat')
+
+%% Extract relevant experiments
+top_experiments = [2];          % Which experiments to use for top
+mid_experiments = [2];          % Which experiments to use for middle
+bot_experiments = [2];          % Which experiments to use for bottom
+
+name_comb_bot   = name_comb_bot(:,top_experiments);
+name_comb_mid   = name_comb_mid(:,mid_experiments);
+name_comb_top   = name_comb_top(:,bot_experiments);
+
+y_comb_bot      = y_comb_bot(:,top_experiments);
+y_comb_mid      = y_comb_mid(:,mid_experiments);
+y_comb_top      = y_comb_top(:,bot_experiments);
+
+u_comb_bot      = u_comb_bot(:,top_experiments);
+u_comb_mid      = u_comb_mid(:,mid_experiments);
+u_comb_top      = u_comb_top(:,bot_experiments);
+
+intr_smpl_val_top = repmat({'zoh'}, size(name_comb_top));
+intr_smpl_val_mid = repmat({'zoh'}, size(name_comb_mid));
+intr_smpl_val_bot = repmat({'zoh'}, size(name_comb_bot));
+
+%% Create Objects
+u_t_id_top = iddata(y_comb_top,u_comb_bot,[],'ExperimentName',name_comb_bot,'Domain','Time','SamplingInstants',t,'InterSample',intr_smpl_val_top,'TimeUnit','seconds','InputName',{'Torque'},'InputUnit',{'Nm'},'OutputName',{'Angular Position'},'OutputUnit',{'Radians'});
+u_t_id_mid = iddata(y_comb_mid,u_comb_mid,[],'ExperimentName',name_comb_mid,'Domain','Time','SamplingInstants',t,'InterSample',intr_smpl_val_mid,'TimeUnit','seconds','InputName',{'Torque'},'InputUnit',{'Nm'},'OutputName',{'Angular Position'},'OutputUnit',{'Radians'});
+u_t_id_bot = iddata(y_comb_bot,u_comb_bot,[],'ExperimentName',name_comb_top,'Domain','Time','SamplingInstants',t,'InterSample',intr_smpl_val_bot,'TimeUnit','seconds','InputName',{'Torque'},'InputUnit',{'Nm'},'OutputName',{'Angular Position'},'OutputUnit',{'Radians'});
+opt = compareOptions('InitialCondition','zero');
+
+%% Black Box Identification
+iodelay = NaN;
+TF_top_est=tfest(u_t_id_top,6,5,iodelay,'Feedthrough','false');
+TF_mid_est=tfest(u_t_id_mid,6,5,iodelay,'Feedthrough','false');
+TF_bot_est=tfest(u_t_id_bot,6,5,iodelay,'Feedthrough','false');
+
+%% Comparison for Black Box
+figure(1)
+compare(u_t_id_top,TF_top_est,Inf,opt)
+figure(2)
+compare(u_t_id_mid,TF_mid_est,Inf,opt)
+figure(3)
+compare(u_t_id_bot,TF_bot_est,Inf,opt)
+%getpvec(TF1_est)
+%advice(uin_tin_id);
+%% Grey Box Identification
+%{
+K1=par(1,1);
+J1=par(2,1);
+C1=par(3,1);
+J2=par(4,1);
+K2=par(5,1);
+C2=par(6,1);
+J3=par(7,1);
+C3=par(8,1);
+kh=par(9,1);
+%}
+% par = [2.7;0.02;0.01;0.02;2.7;0.01;0.02;0.01;1];
+% aux = {};
+% T = 0;
+% sys1_grey_id = idgrey('TDS',par,'c',aux,T);
+% sys1_grey_est = greyest(u_t_id_top,sys1_grey_id);
+
+%% Comparison for Grey Box
+% figure(4)
+% compare(u_t_id_top,sys1_grey_est,Inf,opt)
+% getpvec(sys1_grey_est)
+##### SOURCE END #####
+--></body></html>
