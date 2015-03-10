@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="22"
+   name=""
+   committed-date="2006-09-22T18:28:00.187678Z"
+   url="https://robotics.colorado.edu/svn/NImanual/graphs"
+   last-author="murphey"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="8"
+   name="xygraph.vi"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-08T10:40:50.899771Z"
+   checksum="9415e46172290d154a2c9fc4ce87bc3d"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="8"
+   name="xygraphback.jpg"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-08T10:40:50.899771Z"
+   checksum="eda744f7e048cb94896e258ee489dc79"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="22"
+   name="main.tex"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-22T18:28:00.187678Z"
+   checksum="855ab71c0ab7ea2969d5a322f533bb6f"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="8"
+   name="waveform1.jpg"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-08T10:40:50.899771Z"
+   checksum="dc48fc2a364c369c9869b17eab3f98b7"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="8"
+   name="xygraphfront.jpg"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-08T10:40:50.899771Z"
+   checksum="8fe084485612603cea46ad3065fc52c5"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+</wc-entries>

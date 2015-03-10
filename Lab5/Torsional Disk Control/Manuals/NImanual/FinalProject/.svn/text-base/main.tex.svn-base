@@ -1,0 +1,55 @@
+\fancyhf{}
+\fancyfoot[L]{\textbf{ECEN 4638--T.D. Murphey}}
+\fancyfoot[R]{\textbf{Final Project}}
+\fancyfoot[C]{\vspace{.2in}\thepage}
+
+\chapter{Final Project Guidelines: \emph{A Lab on Performance}}
+
+\begin{center}  \textbf{Objective}
+\end{center}
+
+The purposes of this lab are to allow you to really be concerned about
+performance in the last lab task you do.  The overall goals of the final project
+are to:
+\begin{enumerate}
+\setlength{\itemsep}{-3pt}
+\item make Disk 1 go from $0$ to $\pi$ and stabilize back to $0$ as quickly as
+  possible,
+\item accomplish the same task for  Disk 3,
+\item you will do so without breaking the ECP unit,
+\item and do so knowing that I get to move the weights on the ECP device
+  (hence, introducing uncertainty into the system).
+\end{enumerate}
+This is a ``competition'' in the sense that I will rank your results, but in
+general your ranking will not affect your grade.  The only thing that will
+affect your grade is your lab report, which will be due \textbf{December 13}.
+Rules regarding the final project:
+\begin{enumerate}
+\setlength{\itemsep}{-3pt}
+\item you choose your own groups,
+\item everyone will write an individual lab report,
+\item everyone will use the same ECP unit, 
+\item total time will be measured from the time the disk has moved $2$ degrees
+  ($0.035$ rad) until it has settled to within $2$ degrees,  
+\item you are permitted to run your code beforehand and do any system
+  identification on the particular ECP unit we are going to use (I'll point it
+  out in class),
+\item for those of you with final conflicts, etcetera, you may do your final
+  project outside of the scheduled time.  We will have to agree on a time for
+  everyone who cannot do it on Friday, December 9, to do it on Monday, December
+  12.  
+\end{enumerate}
+Your lab report should include all aspects of the design process, including:
+\begin{enumerate}
+\setlength{\itemsep}{-3pt}
+\item  numerical simulations of the task,
+\item  numerical analysis (e.g., root locus, bode, nyquist, sensitivity analyses), 
+\item symbolic calculations (e.g., gain margin, phase margin, steady state
+  error).
+\end{enumerate}
+Questions?  Ask!
+
+
+%% Local Variables:
+%% TeX-master: "../LVmanual.tex"
+%% End:

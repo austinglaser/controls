@@ -1,0 +1,137 @@
+\documentclass[12pt]{book}
+%---------------------------------
+\setlength{\topmargin} {0in}
+\setlength{\oddsidemargin}{-0.0in}
+\setlength{\evensidemargin}{-0.0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8in}
+\setlength{\columnsep}{0.2in}
+\setlength{\headheight} {0.0in}
+\setlength{\headsep}    {0.5in}
+%------------------------------\-
+
+%\hfill{\normalsize \sc Revised: \today}
+\usepackage{graphicx}
+%\usepackage{myheadings}
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage[plainpages=false,pdfpagelabels]{hyperref}
+
+\usepackage{calc}
+
+\newcounter{hours}\newcounter{minutes}
+\newcommand{\findtime}{%
+    \setcounter{hours}{\time/60}%
+    \setcounter{minutes}{\time-\value{hours}*60}}
+\newcommand{\paddedminutes}{%
+    \ifnum\value{minutes}<10 0\theminutes\else \theminutes\fi
+    }
+\newcommand{\thetime}{%
+    \themilitarytime}
+\newcommand{\themilitarytime}{%
+    \findtime
+    \thehours:\paddedminutes}
+\newcommand{\theampmtime}{%
+    \findtime
+    \ifnum\value{hours}>12
+        \setcounter{hours}{\value{hours}-12}%
+        \thehours:\paddedminutes~PM%
+        \findtime
+    \else
+        \ifnum\value{hours}=0
+            12:\paddedminutes~AM%
+        \else
+            \thehours:\paddedminutes~AM%
+        \fi
+    \fi}
+
+\usepackage{ifthen,version}
+\newboolean{include-notes}
+% Comment out the following line to exclude the notes.
+% \setboolean{include-notes}{true}
+%notes
+\newcommand{\tmnote}[1]{\ifthenelse{\boolean{include-notes}}%
+  {\textbf{TM says: #1}}{}}
+\newcommand{\ejnote}[1]{\ifthenelse{\boolean{include-notes}}%
+  {\textbf{EJ says: #1}}{}}
+\newcommand{\includesections}[1]{\ifthenelse{\boolean{include-notes}}%
+  {#1}{}}
+
+
+\newboolean{internal-release}
+% Comment out the following line to exclude internal only parts
+% \setboolean{internal-release}{true}
+\newcommand{\internalonly}[1]{\ifthenelse{\boolean{internal-release}}%
+  {#1}{}}
+
+
+\title{LabVIEW for Control Analysis and Design}
+\author{Todd Murphey\\ DRAFT as of \today at \theampmtime}      
+\date{}
+
+\bibliographystyle{plainnat}
+
+
+\begin{document}
+\maketitle
+%\pagenumbering{roman}
+\newpage
+\tableofcontents
+\newpage
+%\pagenumbering{arabic}
+%\setcounter{page}{1}
+\newpage
+\input{preface/main}
+\newpage
+\chapter{Introduction \label{sec-introduction}}
+\input{introduction/main}
+\chapter{Basics of Graphical Programming \label{sec-graphicalprogramming}}
+\input{graphical/main}
+\chapter{Simulation Module \label{sec-simulation}}
+\input{simulation/main}
+\input{mathscript/main}       
+\input{graphs/main}         
+\input{saveread/main} 
+%\input{symbolic/main}
+\chapter{Analysis \label{sec-analysis}} 
+\input{freqdomain/main}          
+\input{statedomain/main}          
+\input{digital/main}          
+
+\internalonly{
+\chapter{LabVIEW 8.2 Installation \label{sec-installation}}
+\input{install/main}
+\chapter{Torsional Plant System Identification \label{sec-sysID}}
+\input{systemid/main}
+}
+
+
+\appendix                
+\newpage
+\input{Lab1/main}
+\newpage
+\input{Lab2/main}
+\newpage
+\input{Lab3/main}
+\newpage
+\input{Lab4/main}
+\newpage
+\input{Lab5/main}
+\newpage
+\input{Lab6/main}
+\newpage
+\input{Lab7/main}
+\includesections{
+\newpage
+\input{FinalProject/main}}
+
+
+
+\newpage 
+\pagestyle{empty}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{bibliography/bibliography}
+
+
+\end{document}
+

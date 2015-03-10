@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="45"
+   name=""
+   committed-date="2007-10-03T00:50:40.576117Z"
+   url="https://robotics.colorado.edu/svn/NImanual/Lab3"
+   last-author="murphey"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="3"
+   name="vipic.pdf"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-01T02:57:34.726669Z"
+   checksum="64939d821852608d1ae35f2874cf5809"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="45"
+   name="main.tex"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2007-10-03T00:50:40.576117Z"
+   checksum="5a7e29c362d9876f4ee5be324a5d0325"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="24"
+   name="Lab3Templated.png"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-29T20:11:02.841136Z"
+   checksum="fd27dcdc42e20b888c3ee775edb285eb"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="17"
+   name="solve.nb"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-19T06:24:08.681557Z"
+   checksum="5e2aba9a4856284647a01770f75c63c1"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="20"
+   name="fpgatemplate.jpg"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-20T17:46:33.754275Z"
+   checksum="2182619b319f9fc6f53fc57a87f2b2af"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="21"
+   name="Lab3Template.vit"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-20T20:08:48.061413Z"
+   checksum="94c3435d8c8e2df42b4a316259971f83"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+</wc-entries>
