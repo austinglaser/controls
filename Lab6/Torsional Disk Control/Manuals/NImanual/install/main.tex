@@ -1,0 +1,171 @@
+\section{Image Installation}
+        The installation files for LabVIEW 8.2 and the required modules will be copied to the hard drive so that the LabVIEW development platform can be quickly reinstalled when the computer is re-imaged.
+
+\begin{enumerate}
+        \item Create a new directory: \texttt{C:\textbackslash LabVIEW 8.2 Installation}
+        \item Insert the installation disk.
+        \item Copy all of the files on the disk to \texttt{C:\textbackslash LabVIEW 8.2 Installation}
+        \item Remove the installation disk.
+\end{enumerate}
+
+        An installation image can now be created from the hard drive.
+
+\section{Installation}
+
+        This subsection assumes that the computer has been properly imaged and has the directory \texttt{C:\textbackslash LabVIEW 8.2 Installation} that contains all of the installation files.  LabVIEW and the required modules will now be installed.  If an FPGA board will be used on the machine, the FPGA 8.20 and NI-RIO 2.1 modules must be installed.  The installation can be done manually or using the included batch file.  If an NI FPGA board is already installed in the computer, it does NOT have to be removed for installation.
+
+\subsection{Automatic Installation}
+        For automatic installation, run \texttt{C:\textbackslash LabVIEW 8.2 Installation\textbackslash setup.bat}  The file will install:
+
+\begin{enumerate}
+        \item LabVIEW 8.20
+        \item LabVIEW FPGA 8.20
+        \item National Instruments RIO 2.1
+        \item Simulation Module 8.20 Beta
+        \item Control Design Toolkit
+        \item System Identification Toolkit 3.0
+        \item LabVIEW 8.20 Patches for Control Design Toolkit 2.1
+        \item Todd Murphey's Torsional Plant FPGA VIs
+\end{enumerate}
+
+        The installation takes a significant amount of time.  Be patient before deciding the installation has locked up and rebooting the computer.  Log files of the installation will be created in \texttt{C:\textbackslash LabVIEW 8.2 Installation}.  Once the batch file has finished the installation, reboot the computer and continue to the next subsection.
+
+\subsection{Manual Installation}        
+
+\begin{enumerate}
+        \item Run \texttt{C:\textbackslash LabVIEW 8.2 Installation\textbackslash LabVIEW 8.20 English\textbackslash setup.exe}
+        \item (Optional) To install LabVIEW FPGA 8.20, run \texttt{C:\textbackslash LabVIEW 8.2 Installation\textbackslash LabVIEW FPGA 8.20\textbackslash setup.exe} \\
+                The FPGA installation will prompt you to install NI-RIO.  Select the directory \texttt{C:\textbackslash LabVIEW 8.2 Installation\textbackslash NI-RIO 2.1\textbackslash NIRIO}
+        \item Run \texttt{C:\textbackslash LabVIEW 8.2 Installation\textbackslash Simulation Module 8.2 beta\textbackslash setup.exe}
+        \item Run \texttt{C:\textbackslash LabVIEW 8.2 Installation\textbackslash Control Design\textbackslash setup.exe}
+        \item Run \texttt{C:\textbackslash LabVIEW 8.2 Installation\textbackslash System Identification Toolkit 3.0 \textbackslash setup.exe}
+\end{enumerate}
+
+        There are two patches for the Control Design Toolkit that should be installed:
+\begin{enumerate}
+        \item Unzip the file \texttt{C:\textbackslash LabVIEW 8.2 Installation\textbackslash patches\textbackslash CDT21Err20111Fix.zip} to \texttt{C:\textbackslash Program Files\textbackslash National Instruments\textbackslash LabVIEW 8.2\textbackslash}.  If prompted, select ``Yes'' to overwrite the directory \texttt{vi.lib}.
+
+        \item Unzip the file \texttt{C:\textbackslash LabVIEW 8.2 Installation\textbackslash patches\textbackslash CDT21binFileFix.zip} to \texttt{C:\textbackslash Program Files\textbackslash National Instruments\textbackslash}.  If prompted, select ``Yes'' to overwrite the directory \texttt{Shared}.
+\end{enumerate}
+
+        Finally, copy the directory \texttt{C:\textbackslash LabVIEW 8.2 Installation\textbackslash code\textbackslash} to \texttt{C:\textbackslash Program Files\textbackslash National Instruments\textbackslash}.  This file contains FPGA VI's that can interface with the torsional plant hardware.
+
+\section{Installing the FPGA}
+        If the NI-FPGA board is not installed, turn off and unplug the computer, insert the board into an empty PCI slot, plug in and turn on the computer.
+
+        When Windows has started, a \texttt{Found New Hardware...} dialog should pop up.  Let the hardware wizard automatically find and install the drivers.
+
+\section{Configuring LabVIEW}
+        When LabVIEW is first opened, it must be activated.
+\begin{enumerate}
+        \item Open LabVIEW 8.2
+        \item An ``Evaluation License'' dialog will open.  Select ``Activate.''
+        \item Select ``Automatically activate through a secure internet connection.''
+        \item Enter the serial number M21X98212
+        \item Enter Todd Murphey for the first and last name, and CU Boulder ECEE Dept. for organization.
+        \item Uncheck the registration box and select ``Next>>''
+        \item Select ``Next>>''
+        \item Select ``Finish'' once the activation is complete.
+        \item If the Windows firewall dialog opens, select ``Unblock''
+        \item The ``Prompt for Mass Compile'' dialog will open.  Select ``Mass Compile Now'' and wait for the compilation to finish.
+        \item 
+\end{enumerate}
+
+\section{Using the NI-7831 FPGA with the ECP Model 205a Torsional Plant}
+
+        This subsection describes how to use Todd Murphey's included VIs to interface with the ECP Model 205a Torsional Plant.  First, the hardware must be properly connected.
+
+\begin{enumerate}
+        \item Connect a NI SCB-68 breakout box to the MIO-C0 port on the NI-7831 FPGA board.  
+        \item Set SCB-68 configuration switches to use the NI-7831:
+        \begin{enumerate}
+                \item{Switch 1} Left
+                \item{Switch 2} Left
+                \item{Switch 3} Down
+                \item{Switch 4} Up
+                \item{Switch 5} Up
+        \end{enumerate}
+
+        \item Using the double-wire, connect the Plant Drive Power connector to the Power Amplifier MOTOR connector.  
+        \item Using the single-wire, connect the Plant Feedback connector to the SCB-68 breakout box.  The connections between the single-wire outputs and the SCB-68 are as follows:
+        \begin{enumerate}
+                \item{Red} - Pin 1 (+5V)
+                \item{Black} - Pin 2 (DGND)
+                \item{Yellow} - Pin 36 (DIO0)
+                \item{White} - Pin 37 (DIO1)
+                \item{Blue} - Pin 38 (DIO2)
+                \item{Green} - Pin 39 (DIO3)
+                \item{Brown(?)} - Pin 40 (DIO4)
+                \item{Orange} - Pin 41 (DIO5)
+        \end{enumerate}
+        \item Connect the Power Amplifier DAC input to SCB-68 Pin 55 (AO0)
+        \item Connect the Power Amplifier DAC/ input to SCB-68 Pin 21 (AOGND0)
+        \item Check that the amplifier power switch is turned off.
+        \item Plug in the power amplifier.
+
+\end{enumerate}
+
+        The hardware setup should be complete.  The LabVIEW FPGA code can now be compiled and tested:
+
+\begin{enumerate}
+        \item Open LabVIEW.
+        \item Open the file \texttt{C:\textbackslash Program Files\textbackslash National Instruments\textbackslash code\textbackslash4638fpgaproject.lvproj}.  If the file fails to open, create a new project:
+        \begin{enumerate}
+                \item Left click on ``Empty Project.''
+                \item Save project. 
+                \item Right click on ``My Computer'' and select ``New - > Targets and Devices.''
+                \item Under ``Existing target or device'' select ``FPGA Target - RIO0:\"INSTR
+   (PCI-7831R).''
+                \item In the project, right click on ``FPGA Target\ldots'' and select ``Add File\ldots'' and add ``reading\_encoders.vi'' to the project.
+                \item Save project.
+                \item Right click on ``FPGA Target\ldots'' and select ``New FPGA I/O''.  Add Analog
+   Output: AO0, and Digital Line Input and Output Connector 0: DIO0, DIO1, DIO2, DIO3, DIO4, DIO5.
+        \end{enumerate}
+
+        \item In the project, expand \texttt{FPGA Target} and double click on \texttt{reading\_encoders.vi.}
+        \item Hit Ctrl E to see the back panel (where the code is) to make sure that
+   there are no broken wires in the code.  If there are, contact me.
+        \item In the project, right click on \texttt{reading\_encoders.vi} and select
+   ``Compile.''  If you get an error saying that it cannot contact the compile
+   server, hit retry.
+        \item Once the VI has compiled, go to the front panel, hit run, and verify that rotating
+   the ECP unit counterclockwise causes all the counts to go up.  If not, double check all connections.  The power amplifier should not have to be turned on to use the encoders.  They receive power through SCB-68 pin 1.  If the VI still does not respond, this will have to be fixed in the FPGA code.
+        \item Close the FPGA project.
+\end{enumerate}
+
+\section{Using the \texttt{reading\_encoders.vi} FPGA interface VI.}
+        In addition to the FPGA code, the installation includes two standard VI's that use the FPGA VI.  The first VI, \texttt{targetcode.vi} continuously reads the FPGA output to plot the angle of each disk. 
+\begin{enumerate}
+        \item Open \texttt{C:\textbackslash Program Files\textbackslash National Instruments\textbackslash code\textbackslash targetcode.vi}
+        \item Press Ctrl-E to open the back panel. 
+        \item Right click on the FPGA Node labeled \texttt{NI-7831R} near the left side of the panel and choose ``Select Bitfile...''  The bitfile is the object file that was compiled from the FPGA VI.  By assigning a bitfile to the FPGA node, the client VI can use FPGA VI without having to recompile the FPGA code.
+        \item Under the \texttt{Bitfiles} subdirectory, select the file \texttt{4638fpga \ldots .vi.lvbit}.
+        \item Check the VI to make sure that all wires are now connected.
+        \item Run the VI and rotate the disks. The plots should display the angles of each disk.
+        \item Press the ``Halt?'' button to stop the VI.
+\end{enumerate}
+
+The second VI implements a closed-loop PID controller to control the angle of the disks.
+
+\begin{enumerate}
+        \item Open \texttt{C:\textbackslash Program Files\textbackslash National Instruments\textbackslash code\textbackslash targetcode.vi}
+        \item Press Ctrl-E to open the back panel. 
+        \item Right click on the FPGA Node labeled \texttt{NI-7831R} near the left side of the panel and choose ``Select Bitfile...''  The bitfile is the object file that was compiled from the FPGA VI.  By assigning a bitfile to the FPGA node, the client VI can use FPGA VI without having to recompile the FPGA code.
+        \item Under the \texttt{Bitfiles} subdirectory, select the file \texttt{4638fpga \ldots .vi.lvbit}.
+        \item Check the VI to make sure that all wires are now connected.
+
+        \item Run the VI.
+        \item Enter a small NEGATIVE gain for the proportional controller.
+        \item Turn on the power amplifier.  The current FPGA VI does not have any safeguards to prevent the system from becoming unstable.  Keep your fingers near the power button.
+        \item Gently disturb the plant.  The controller should apply inputs to return the disks to the correct angle.
+        \item Turn off the power amplifier.
+        \item Press the ``Halt?'' button to stop the VI.
+\end{enumerate}
+
+\section{Notes}
+
+
+
+%% Local Variables:
+%% TeX-master: "../LVmanual.tex"
+%% End:

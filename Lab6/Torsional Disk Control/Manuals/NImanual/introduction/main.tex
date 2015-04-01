@@ -1,0 +1,64 @@
+\section{Introduction}  
+
+LabVIEW is a graphical programming language in principle capable of the same
+utility that programming in C or C++ can provide.  Some capabilities of C++ are
+more difficult to obtain, but for the purposes of control systems\textendash the focus of
+this short tutorial\textendash LabVIEW is an exceptionally convenient programming
+language.  This is for two primary reasons:
+\begin{enumerate}
+\item LabVIEW enables programming that mirrors that graphical analysis tools
+  (such as block diagrams) that we use to analyze control systems;
+\item LabVIEW seamlessly (well, at least ideally seamlessly) incorporates
+  ``hardware-in-the-loop'' needs into code.  
+\end{enumerate}
+We will see both of these become evident over the course of this tutorial.  
+
+\subsection{Background and Purpose}
+
+This tutorial is being written as an accompaniament to the new control
+laboratory course ECEN 4638 \cite{murphey-ace2006} at the University of
+Colorado, based on student comments from previous laboratories.  Hence, this
+tutorial is not intended to be exhaustive\textendash exhaustive tutorials have not been
+very beneficial to students because they tend to be overwhelming.  Instead, this
+tutorial aims to very specifically introduce students to LabVIEW in such a way
+that they can use it \emph{in specific application to control systems} and so
+that they may become comfortable both with LabVIEW in particular and graphical
+programming in general, both of which are becoming standards in industry.
+Moreover, this type of exposure is intended to encourage more student
+investigation (both in LabVIEW, controls, and life in general) rather than
+explicitly laying out the solutions to all anticipated problems.  (This learning
+philosophy is along the lines of \cite{murphey-te2006}.)
+
+\subsection{Philosophical relationship between LabVIEW and other programming
+  languages.}
+
+LabVIEW is to C (C++, Fortran, etc) as C is to assembly.  More to come here.
+
+Data Flow, blocks that represent data manipulation, graphical, similar to block
+diagrams, lines represent data types, 
+
+Lastly, it is worth mentioning that LabVIEW is compiled, not interpreted.  Among
+other things, this often means that when you are using new functionality, it
+will require some time for it to compile all the code, particularly the code
+that references hardware on your machine.  Be patient!
+
+\subsection{Organization}
+
+This tutorial will be organized according to the needs of an introductory
+controls course.  The goal is \emph{not} to systematically introduce students to
+all of LabVIEW's capabilities. It is the author's view that this is simply an
+untenable goal leading to certain failure and confusion on the part of the
+students.  Instead, we will focus on using simple examples, as they become
+useful, to illustrate new tools being used within LabVIEW.  As the tutorial
+proceeds, it is assumed that less and less explicit instruction will be
+required, so some hints may simply lead the reader to look at a particular tool
+on his own and merely indicate that it is indeed a useful tool.
+
+
+
+ 
+
+%% Local Variables:
+%% TeX-master: "../LVmanual.tex"
+%% End:
+

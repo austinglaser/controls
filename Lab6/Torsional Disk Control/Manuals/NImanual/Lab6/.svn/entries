@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="39"
+   name=""
+   committed-date="2006-11-27T22:51:57.982478Z"
+   url="https://robotics.colorado.edu/svn/NImanual/Lab6"
+   last-author="murphey"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="39"
+   name="main.tex"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-11-27T22:51:57.982478Z"
+   checksum="f285bc79af0d83ea7c891141afc737e2"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+</wc-entries>

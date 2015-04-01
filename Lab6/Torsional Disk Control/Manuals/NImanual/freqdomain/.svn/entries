@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="34"
+   name=""
+   committed-date="2006-10-23T09:52:36.303088Z"
+   url="https://robotics.colorado.edu/svn/NImanual/freqdomain"
+   last-author="erjohnso"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="34"
+   name="mathscript-rlocfind.png"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-10-23T09:52:36.303088Z"
+   checksum="cede9efa8d8240686198192ad0c11e9c"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="34"
+   name="labview-root-locus.png"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-10-23T09:52:36.303088Z"
+   checksum="4bca3f503e05a60584217517db09adb6"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="34"
+   name="main.tex"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-10-23T09:52:36.303088Z"
+   checksum="9a320495cf45fc231d1921eba47eda73"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="34"
+   name="mathscript-rlocfind.jpg"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-10-23T09:52:36.303088Z"
+   checksum="45d50f93fbc98ab91729efb1658e148d"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="34"
+   name="labview-root-locus.jpg"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-10-23T09:52:36.303088Z"
+   checksum="5af138ead4106fcd17d1821e566e5d2c"
+   last-author="erjohnso"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+</wc-entries>

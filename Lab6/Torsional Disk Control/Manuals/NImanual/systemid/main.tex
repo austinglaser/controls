@@ -1,0 +1,326 @@
+
+\begin{center}  \textbf{Objective}
+\end{center}
+We provide several LabVIEW VIs that can be used to quickly collect
+and analyze data from a plant to determine model parameters.  This
+section provides instructions for using the VIs and presents results
+from several ECP torsional plant units.
+
+\ejnote{I go over the plant model so that it is clear what the
+  parameters we are determining are.  Perhaps it would be better to
+  have a separate system model section?  Another idea is to create
+  ``solutions'' for each lab and then present the model in the Lab 2
+  solutions and the system identification stuff in the Lab 3 one. I
+  think this would prevent a lot of duplication.}
+
+\section{System Identification}
+
+The system identification problem is to create an accurate dynamical
+model of the system.  The first step is to define the equations of
+motion for the plant.
+
+The plant consists of the bottom, middle, and top disks with
+rotational inertias $J_1$, $J_2$, and $J_3$ and angles $\theta_1$,
+$\theta_2$, $\theta_3$. Each disk has a viscous dissipation force with
+damping coefficients $c_1$, $c_2$, and $c_3$.  There are torsional
+springs connecting the bottom and middle disks and the middle and top
+disks with respective spring constants $k_1$, $k_2$.  The power
+amplifier and motor are treated as a single gain, $k_{h}$, with no
+dynamics.  The resulting state space model is
+
+
+\begin{equation}
+\dot{x} = 
+\left[\begin{array}{c}
+\dot{\theta_1} \\
+\dot{\theta_2} \\
+\dot{\theta_3} \\
+\ddot{\theta_1} \\
+\ddot{\theta_2} \\
+\ddot{\theta_3} \\
+\end{array}\right]
+= 
+\left[\begin{array}{cccccc}
+     0           &     0                &      0           &     1            &     0            &     0            \\
+     0           &     0                &      0           &     0            &     1            &     0            \\
+     0           &     0                &      0           &     0            &     0            &     1            \\
+-\frac{k_1}{J_1} &  \frac{k_1}{J_1}     &      0           & -\frac{c_1}{J_1} &     0            &     0            \\
+ \frac{k_1}{J_2} & -\frac{k_1+k_2}{J_2} &  \frac{k_2}{J_2} &     0            & -\frac{c_2}{J_2} &     0            \\
+     0           &  \frac{k_2}{J_3}     & -\frac{k_2}{J_2} &     0            &     0            & -\frac{c_3}{J_3} \\
+\end{array}\right]
+\left[\begin{array}{c}
+\theta_1 \\
+\theta_2 \\
+\theta_3 \\
+\dot{\theta_1} \\
+\dot{\theta_2} \\
+\dot{\theta_3} \\
+\end{array}\right]
++
+\left[\begin{array}{c}
+0 \\
+0 \\
+0 \\
+\frac{k_{h}}{J_1} \\
+0 \\
+0 \\
+\end{array}\right]u
+\end{equation}
+\begin{equation}
+y = \left[\begin{array}{cccccc} 
+1 & 0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 0 & 0 \\
+\end{array}\right]x
+\end{equation}
+
+To complete the model, the values of the model parameters must be
+determined.  
+
+\subsection{Rotational Inertia}
+The inertia parameters can be calculated from known quantities.  The
+ECP manual provides the rotational inertia of an unloaded disk (0.0019
+kg-m$^2$), the mass of each weight (0.5 kg), and the radius of a
+weight (2.5 cm).  By treating the weights as cylinders, the rotational
+inertia of a disk loaded with $N$ weights can be found:
+\begin{equation}
+J = J_{disk} + \sum_{i=1}^N \left(  \frac{1}{2}m r^2 + m R_i^2 \right)
+\end{equation}
+where $r$ is the radius of a weight and $R_i$ is the distance from the
+weight to the center of the disk.  For the bottom disk, rotational
+inertia of the motor-drive assembly can be included using the value from the
+ECP manual (0.0005 kg-m$^2$).
+
+\subsection{Spring and Damper Coefficients}
+
+The spring and damper coefficients are most easily found by by clamping the
+middle disk to create two independent second-order systems.  The
+transfer function for each disk in this configuration is
+
+\begin{equation}
+\label{second_order_equality}
+ \frac{Y(s)}{U(s)} = \frac{1/J}{s^2 + (c/J)s + k/J} = \frac{K}{s^2 +
+ 2\zeta \omega_n s + \omega_n^2} 
+\end{equation}
+
+where $\omega_n$, $\zeta$, and $K$ are the standard second order plant
+parameters.  The impulse response of a second order system is an
+exponentially decaying sinusoid given by the equation:
+
+\[ y(t) = y_0 e^{-\sigma t} \sin \omega_d t \qquad \sigma = \zeta\omega_n \qquad \omega_d = \omega_n \sqrt{1-\zeta^2} \]
+
+where $y_0$ is the initial angle of the disk.  
+
+Measuring the impulse response is equivalent to choosing non-zero
+initial conditions for the plant and measuring the unforced response
+of the plant.  Any number of methods can be used to determine the
+frequency, $\omega_d$, and the rate of decay, $\sigma$ from the data.
+Once these parameters are known, the spring constant and damping ratio
+of the corresponding disk can be calculated.  It is assumed that $c_3 = c_2$.
+
+\subsection{Hardware Gain}
+The hardware gain, $k_{hw}$ is the ratio of the applied torque and specified
+voltage.  It represents the combined dynamics of the power amplifier
+and motor, and is assumed to be constant for the lab course.
+
+To find $k_{hw}$, the plant is reduced to a different second order
+system by unclamping all disks and removing the weights from the top
+and bottom disks.  For further accuracy, the top and bottom disks can
+also be removed.  The resulting trasnfer function is 
+\[ \frac{Y(s)}{U(s)} = \frac{k_{hw}/J}{s(s + C/J)} \]
+
+To determine the gain, we apply an input $U(s)$ to the plant and
+record the system response.  The same input is used to simulate the
+plant by assuming $k_{hw}=1$ along with the parameters found earlier.
+The actual gain is found by comparing the two responses:
+\[ \frac{Y_m(s)}{Y_s(s)} = \frac{\frac{k_{hw}/J}{s(s + c/J)}U(s)}{\frac{1/J}{s(s + c/J)}U(s)} = k_{hw} \]
+where $Y_m$ and $Y_s$ are the measured and simulated responses,
+respectively.  Rather than compare the outputs for all time, the final
+steady state values are used.
+
+\section{VI Implementations}
+
+Four LabVIEW VI's are provided for doing system identification:
+\begin{description}
+	\item[System ID Recorder] Records the unforced response to
+	non-zero intial conditions to determine $C$ and $K$.
+	\item[System ID Analyzer] Analyzes data from the system ID recorder.
+	\item[Hardware Gain Recorder] Applies a pulse input to the
+	system and records response to determine $k_{hw}$.
+	\item[Hardware Gain Analyzer] Analyzes data from the hardware gain recorder.
+\end{description}
+	
+The VI's were designed to conveniently and quickly capture and analyze
+a large number of data sets.  They allow the user to quickly determine
+parameters, compare simulated responses to actual data, and
+investigate nonlinearities in the system.
+
+\subsection{System ID Recorder}
+    The System ID Recorder VI is implemented in
+    \texttt{system\_id\_logger.vi}.  This VI records the unforced
+    response of a disk and saves the results to a file. To use the VI,
+    follow these steps:
+
+
+\begin{enumerate}
+   \item Disconnect the motor power or turn off the power amplifier.
+   \item Securely clamp the middle disk to the frame. 
+   \item Place weights on the disk to be used.  Calculate the disk
+       inertia for the weight configuration.
+   \item Select the appropriate disk from the pull-down menu on the VI
+       front panel.
+   \item Enter an appropriate recording time on the VI front panel.
+      The time should be long enough for the disk to come to rest
+      after an initial push, plus a little extra time for you to push
+      the disk.
+   \item Start the VI.  Wait until the FPGA is initialized and the VI
+      begins plotting data.
+   \item Gently move the disk and quickly release it.  The disk should
+      not be turned more than 40 degrees or the spring could be
+      damaged.
+   \item When the VI finishes, a dialog box will ask you where to save
+      the file.  Select a directory and enter a new filename, or
+      select a file that was created using the same VI and plant
+      configuration.  The VI will remember your choice and append
+      future data to the file.  If you want to write to a new file,
+      either clear the filename control on the front panel, or enter
+      the new filename.
+   \item You can run the VI repeatedly to gather more data from
+   different initial conditions.  To use the data effectively with the
+   analyzing VI, the same weight configuration should be used for all
+   data runs saved in a file.  Create a new file if the number of
+   weights are changed.
+
+\end{enumerate}
+
+Once you have recorded enough data, you can analyze it to find the
+spring and damper coefficients using the analyzer VI.
+
+\begin{center}\begin{tabular}{|p{0.75\textwidth}|}
+\hline The data is saved to file using LabVIEW's \texttt{Write to
+Spreadsheet} Sub-VI.  The file is an ASCII text file where each data
+set consists of two rows.  The first is the time relative to the start
+of the VI and the second is the measured position of the disk at
+that time.  These files can easily be imported into Excel, MATLAB, or
+another LabVIEW VI. \\
+\hline
+\end{tabular}\end{center}
+
+\subsection{System ID Analyzer}
+
+The System ID analyzer is implemented in
+\texttt{system\_id\_analyzer.vi}.  When you run the VI, a dialog will
+ask you choose the data file.  Only use files created with the System
+ID Recorder. 
+   
+This VI uses recorded unforced responses and a calculated rotational
+inertia to estimate the spring and damer coefficients for a disk.  The
+parameters are plotted with respect to their data sets initial
+conditions to provide some insight into non-linearities in the
+system.  The VI will also simulate the system with the estimated
+parameters for comparison against the recorded data.
+
+\subsubsection{Impementation}
+    
+The VI first selects two peaks from the data.  The first peak is
+chosen by taking the first peak after the global minimum of the data.
+As long as the disk was only pushed to one direction to create the
+initial conditions, this tends to select the first or second peak of
+the unforced response.  This point $(t_0,y_0)$ is considered the
+initial condition of the data.  The second point $(t_1, y_1)$ is the
+last peak that is more than 5\% of the initial condition.  The damped
+frequency and decay rate are calculated from these two points:
+
+\begin{equation}
+\omega_d = \frac{2\pi(N-1)}{t_1-t_0}
+\qquad
+\sigma = - \frac{\ln{y_0}-\ln{y_1}}{t_1 - t_0}
+\end{equation}
+
+where $N$ is the number of peaks between and including the two chosen
+peaks.  These are converted to the damping ratio and natural frequency
+of the system:
+
+\begin{equation}
+\omega_n = \sqrt{ \omega_d^2 + \sigma^2} \qquad
+\zeta = \frac{\omega_n}{\sigma}
+\end{equation}
+
+The second order parameters are used to calculate the spring and
+damper coefficients according to
+Equ. \ref{second_order_equality}.
+
+\begin{equation} 
+c = 2 J \omega_n \zeta
+\qquad
+k = J \omega_n^2 
+\end{equation}
+
+\subsection{Hardware Gain Recorder}
+
+The Hardware Gain Recorder is implemented in
+\texttt{hardware\_gain\_logger.vi}.  This VI applies a 1 second wide
+pulse to the plant and records the response.  Follow these steps to
+use this VI:
+
+\begin{enumerate}
+    \item Make sure all disks are unclamped and the bottom disk is
+       completely free to rotate.
+    \item Remove all weights from the top and middle disk.  For
+       additional accuracy, remove the disks themselves from the plant.
+    \item Place weights on the bottom disk and calculate the disk
+       inertia.
+    \item Connect the power amplifier to the motor and turn on the
+       power amplifier.
+    \item Enter the desired pulse voltage on the VI front panel.
+    \item Enter an appropriate recording time on the VI front panel.
+       The time should be long enough for the system to come to rest.
+    \item Run the VI.  After approximately 2 seconds, the pulse will
+       be applied and the system will spin and slowly come to rest.  
+    \item When the VI is finished, a dialog box will ask you where to
+       save the file.  The filename will be saved and used for future
+       data sets.  Use the same file for all data runs with the same
+       weight configuration.  The recording time and voltage can
+       change within the file.
+    \item Once you've chosen a filename, you can use LabVIEW's ``Run
+       continuously'' function to capture several data runs at a single
+       value.
+    \item Be sure to capture data for different pulse voltages to see
+       how the gain changes with the applied voltage.
+\end{enumerate}
+
+\begin{center}\begin{tabular}{|p{0.75\textwidth}|}
+\hline The data is saved to file using LabVIEW's \texttt{Write to
+Spreadsheet} Sub-VI.  The file is an ASCII text file where each data
+set consists of three rows.  The first is the time relative to the
+start of the VI, the second is the measured position, and the third is
+the input signal.  These files can easily be imported into Excel,
+MATLAB, or another LabVIEW VI. \\ \hline
+\end{tabular}\end{center}
+
+\subsection{Hardware Gain Analyzer}
+
+The hardware gain analyzer is implemented in
+\texttt{hardware\_gain\_analyzer.vi}.  When you run the VI, a dialog
+will ask you choose the data file.  Only use files created with the
+Hardware Gain Recorder.
+   
+This VI uses recorded pulse responses to estimate the hardware gain of
+the plant.  The hardware gain is plotted against the pulse voltage to
+provide insight into non-linearities in the system.  The VI also
+simulates the system with the estimated gain for comparison against
+the actual data.
+
+
+\subsubsection{Implementation}
+
+The VI determines the voltage of the applied pulse and the final
+steady state value of the system from the recorded data. A simulation
+of the system is run using the specified rotational inertia and
+damping coefficient with $k_{hw}=1$.  The hardware gain is determined as
+
+\begin{equation}
+k_{hw} = \frac{y_{exp}(t_f)}{y_{sim}(t_f)}
+\end{equation}
+
+where $t_f$ is the time of the last recorded measurement.

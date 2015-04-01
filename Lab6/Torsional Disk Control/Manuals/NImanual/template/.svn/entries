@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="5"
+   name=""
+   committed-date="2006-09-05T00:30:34.253151Z"
+   url="https://robotics.colorado.edu/svn/NImanual/template"
+   last-author="murphey"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="5"
+   name="main.tex"
+   text-time="2008-12-01T23:48:42.000000Z"
+   committed-date="2006-09-05T00:30:34.253151Z"
+   checksum="ad96376b08e75ea46b3850a94c3f0cdd"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:42.000000Z"/>
+</wc-entries>
