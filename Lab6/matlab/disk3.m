@@ -27,32 +27,33 @@ D = 0;
 G = tf(num, den);
 
 % from sisotool
-zl = 0.238735236105314;
-pl = 0.54878048780488;
-k = 0.54878048780488;
-L = tf([1, zl], [1, pl]);
+Z1 = tf([2.7 1], [1]);
+P1 = tf([1], [0.000061, 1]);
+P2 = tf([1], [0.0676, 0.31, 1]);
+k = 0.050542;
+comp = k*Z1*P1*P2;
 
-cltf = feedback(k*G*L, 1);
+cltf = feedback(comp*G, 1);
 
 
-% subplot(2,2,1)
-% rlocus(G)
+subplot(2,2,1)
+rlocus(G)
+
+subplot(2,2,2)
+rlocus(comp*G)
+
+subplot(2,2,[3 4])
+step(cltf)
+% figure(1)
+% subplot(2,1,1)
+% bode(G)
 % 
-% subplot(2,2,2)
-% rlocus(G*L)
+% subplot(2,1,2)
+% bode(L*G)
 % 
-% subplot(2,2,[3 4])
-% step(cltf)
-figure(1)
-subplot(2,1,1)
-bode(G)
-
-subplot(2,1,2)
-bode(L*G)
-
-figure(2)
-subplot(2,1,1)
-bode(feedback(G, 1))
-
-subplot(2,1,2)
-bode(feedback(L*G, 1))
+% figure(2)
+% subplot(2,1,1)
+% bode(feedback(G, 1))
+% 
+% subplot(2,1,2)
+% bode(feedback(L*G, 1))
