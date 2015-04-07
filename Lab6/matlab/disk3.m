@@ -29,30 +29,47 @@ G = tf(num, den);
 % from sisotool
 zl = 0.238735236105314;
 pl = 0.54878048780488;
-k = 0.54878048780488;
+k = 0.167904143418752;
 L = tf([1, zl], [1, pl]);
 
 cltf = feedback(k*G*L, 1);
 
 
-% subplot(2,2,1)
-% rlocus(G)
-% 
-% subplot(2,2,2)
-% rlocus(G*L)
-% 
-% subplot(2,2,[3 4])
-% step(cltf)
 figure(1)
-subplot(2,1,1)
-bode(G)
+subplot(2,2,1)
+rlocus(G)
+title('uncompensated')
 
-subplot(2,1,2)
-bode(L*G)
+subplot(2,2,2)
+rlocus(G*L)
+title('compensated')
+
+subplot(2,2,[3 4])
+step(cltf)
+title('closed loop step')
 
 figure(2)
+subplot(2,2,1)
+bode(G,{1,20})
+title('open loop uncompensated')
+
+subplot(2,2,2)
+bode(L*G,{1,20})
+title('open loop compensated')
+
+subplot(2,2,3)
+bode(feedback(G, 1),{1,20})
+title('closed loop uncompensated')
+
+subplot(2,2,4)
+bode(feedback(L*G, 1),{1,20})
+title('closed loop compensated')
+
+figure(3)
 subplot(2,1,1)
-bode(feedback(G, 1))
+margin(G)
+%title('uncompensated')
 
 subplot(2,1,2)
-bode(feedback(L*G, 1))
+margin(L*G)
+%title('compensated')
