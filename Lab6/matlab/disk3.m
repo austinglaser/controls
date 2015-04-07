@@ -32,8 +32,7 @@ pl = 0.54878048780488;
 k = 0.167904143418752;
 L = tf([1, zl], [1, pl]);
 
-cltf = feedback(k*G*L, 1);
-
+cltf = feedback(comp*G, 1);
 
 figure(1)
 subplot(2,2,1)
@@ -73,3 +72,4 @@ margin(G)
 subplot(2,1,2)
 margin(L*G)
 %title('compensated')
+
