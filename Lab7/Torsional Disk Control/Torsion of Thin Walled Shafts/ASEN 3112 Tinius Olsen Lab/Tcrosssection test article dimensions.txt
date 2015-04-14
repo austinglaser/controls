@@ -1,0 +1,6 @@
+length =	12.8625	
+df = 	1	in
+dw=	0.75	in
+t = 	0.066	in
+beta = 	0.333	
+Shear modulous =	3.75E+06	

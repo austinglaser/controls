@@ -1,0 +1,34 @@
+\section{State Space Analysis}
+\subsection{Stability}
+\subsection{LQR}
+
+
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=6in]{statedomain/statespacesim1}
+%\caption{System Model}
+%\label{fig-SSsystemmodel}
+%\end{figure}
+
+%\begin{figure}[h!]
+%\centering
+%\rotatebox{90}{\includegraphics[width=9in]{statedomain/statespacesim2}}
+%\caption{State Space Simulation}
+%\label{fig-SSsim}
+%\end{figure}
+
+
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=6in]{statedomain/statespaceest}
+%\caption{State Space Estimation and Control}
+%\label{fig-SSestcontrol}
+%\end{figure}
+
+
+
+
+%% Local Variables:
+%% TeX-master: "../LVmanual.tex"
+%% End:
+

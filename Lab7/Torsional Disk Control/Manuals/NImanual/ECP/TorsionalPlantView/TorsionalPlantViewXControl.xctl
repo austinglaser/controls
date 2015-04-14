@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<XControl LVVersion="8208000">
+   <Property Name="NI.Lib.HelpPath" Type="Str"></Property>
+   <Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
+   <Property Name="NI.XClass.Flags" Type="Int">0</Property>
+   <Property Name="NI.XItem.DeclaredLeakProof" Type="Bool">false</Property>
+   <Property Name="NI.XItem.Name" Type="Str">XControl 1</Property>
+   <Item Name="TorsionalPlantViewData.ctl" Type="Ability VI" URL="TorsionalPlantViewData.ctl">
+      <Property Name="NI.XItem.Name" Type="Str">Data</Property>
+   </Item>
+   <Item Name="TorsionalPlantViewState.ctl" Type="Ability VI" URL="TorsionalPlantViewState.ctl">
+      <Property Name="NI.XItem.Name" Type="Str">State</Property>
+   </Item>
+   <Item Name="TorsionalPlantViewCreateDisk.vi" Type="VI" URL="TorsionalPlantViewCreateDisk.vi"/>
+   <Item Name="TorsionalPlantViewModel.vi" Type="VI" URL="TorsionalPlantViewModel.vi"/>
+   <Item Name="TorsionalPlantViewInit.vi" Type="Ability VI" URL="TorsionalPlantViewInit.vi">
+      <Property Name="NI.XItem.Name" Type="Str">Init</Property>
+   </Item>
+   <Item Name="TorsionalPlantViewFacade.vi" Type="Ability VI" URL="TorsionalPlantViewFacade.vi">
+      <Property Name="NI.XItem.Name" Type="Str">Facade</Property>
+   </Item>
+   <Item Name="TorsionalPlantViewTransforms.vi" Type="VI" URL="TorsionalPlantViewTransforms.vi"/>
+</XControl>

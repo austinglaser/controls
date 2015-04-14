@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="15"
+   name=""
+   committed-date="2006-09-14T02:00:12.526533Z"
+   url="https://robotics.colorado.edu/svn/NImanual/symbolic"
+   last-author="murphey"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="15"
+   name="main.tex"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-14T02:00:12.526533Z"
+   checksum="8b027fe2dd1d8d19168fd73d366be432"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:30.000000Z"/>
+<entry
+   committed-rev="8"
+   name="SymbolicSS.vi"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-08T10:40:50.899771Z"
+   checksum="2a45c5cf627e0f8d81ccc99c63a91c78"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:30.000000Z"/>
+<entry
+   committed-rev="8"
+   name="symbolicSS.jpg"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-08T10:40:50.899771Z"
+   checksum="83922eaf973a41d36a5e246cd52878b0"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="3"
+   name="symbolicvi.pdf"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-01T02:57:34.726669Z"
+   checksum="1566d768b7861092aebc4b7b6cecb3f2"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="3"
+   name="SymbolicTF.jpg"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-01T02:57:34.726669Z"
+   checksum="d38e6d19adff597b9b7e6090e78e04d9"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="3"
+   name="symbolicSSvi.pdf"
+   text-time="2008-12-01T23:48:31.000000Z"
+   committed-date="2006-09-01T02:57:34.726669Z"
+   checksum="ba68114e738adc3d7ba1d39851da6500"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+</wc-entries>

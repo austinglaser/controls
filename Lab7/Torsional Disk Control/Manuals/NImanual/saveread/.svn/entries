@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="22"
+   name=""
+   committed-date="2006-09-22T18:28:00.187678Z"
+   url="https://robotics.colorado.edu/svn/NImanual/saveread"
+   last-author="murphey"
+   kind="dir"
+   uuid="b6c39f29-32da-437b-aceb-b10508fe9815"
+   revision="49"/>
+<entry
+   committed-rev="3"
+   name="readdata2.pdf"
+   text-time="2008-12-01T23:48:32.000000Z"
+   committed-date="2006-09-01T02:57:34.726669Z"
+   checksum="f01d95b5318b45df9e9f6c36ec42cd4c"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="3"
+   name="readdata3.pdf"
+   text-time="2008-12-01T23:48:32.000000Z"
+   committed-date="2006-09-01T02:57:34.726669Z"
+   checksum="7956943c6810dba1e3afeaca0b751753"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="22"
+   name="main.tex"
+   text-time="2008-12-01T23:48:32.000000Z"
+   committed-date="2006-09-22T18:28:00.187678Z"
+   checksum="4dfdd00cb2edcb635c9cafbbd52c9881"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="16"
+   name="readdata1.vi"
+   text-time="2008-12-01T23:48:32.000000Z"
+   committed-date="2006-09-19T03:28:36.649964Z"
+   checksum="22702e376ca4c940865a67c7e360d994"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="16"
+   name="write1.jpg"
+   text-time="2008-12-01T23:48:32.000000Z"
+   committed-date="2006-09-19T03:28:36.649964Z"
+   checksum="6e93826e93de4b185110995f3a789a06"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="16"
+   name="read1.jpg"
+   text-time="2008-12-01T23:48:32.000000Z"
+   committed-date="2006-09-19T03:28:36.649964Z"
+   checksum="1f61c6076c22225b9ac244faa2864120"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="16"
+   name="write2.jpg"
+   text-time="2008-12-01T23:48:32.000000Z"
+   committed-date="2006-09-19T03:28:36.649964Z"
+   checksum="055296bb708ff5f1434d2898654e9d91"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:31.000000Z"/>
+<entry
+   committed-rev="17"
+   name="datacompare1.vi"
+   text-time="2008-12-01T23:48:32.000000Z"
+   committed-date="2006-09-19T06:24:08.681557Z"
+   checksum="15bd31c4453bcff9f537214055f00b70"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+<entry
+   committed-rev="3"
+   name="savedatapic2.pdf"
+   text-time="2008-12-01T23:48:32.000000Z"
+   committed-date="2006-09-01T02:57:34.726669Z"
+   checksum="8be65b88a5f197e0307b2035a6a758d9"
+   last-author="murphey"
+   kind="file"
+   prop-time="2008-12-01T23:48:32.000000Z"/>
+</wc-entries>
